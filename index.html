@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+    <title>Home Page</title>
+</head>
+<!-- font:
+color: #ac8314; -->
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        /* box-sizing: border-box; */
+    }
+
+    body {
+        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+
+    #main-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    #nav-main {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 50px;
+        background-color: #fff;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        padding: 10px;
+        color: #ac9e56;
+        font-size: 20px;
+    }
+
+    #nav-main li {
+        position: relative;
+        list-style: none;
+        padding: 0 30px;
+    }
+
+    #nav-main>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 550;
+        color: #ac9e56;
+        display: block;
+
+    }
+
+    #main-menu>#nav-main>li>a {
+        position: relative;
+    }
+
+    #main-menu>#nav-main>li>a::before {
+        content: "";
+        height: 0.2vh;
+        width: 100%;
+        background-color: #ac8314;
+        position: absolute;
+        bottom: 0px;
+        display: none;
+
+    }
+
+    #main-menu>#nav-main>li:hover>a::before {
+        display: block;
+
+    }
+
+
+
+    /* #nav-main>li>a:hover {
+        background-color: aqua;
+        border-bottom: 0.4vh solid #ac8314;
+    } */
+
+    #nav-main ul.sub-menu {
+        position: absolute;
+        padding: 15px 0;
+        width: 170px;
+        display: none;
+        background-color: #fff;
+        z-index: 10;
+    }
+
+    #nav-main li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #nav-main ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    #nav-main ul.sub-menu li {
+        padding: 10px 0px;
+    }
+
+    #nav-main ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #nav-main ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+
+
+    .slide-banner-top {
+        position: relative;
+    }
+
+    .slide-banner-top {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .slideshow-container {
+        /* max-width: 1000px; */
+        position: relative;
+        margin: auto;
+        padding-top: 4vh;
+    }
+
+    .active {
+        background-color: #222121;
+    }
+
+    /* .slide-banner-top .myslides img {
+        width: 100%;
+        height: 100%;
+    } */
+
+    img {
+        /* width: 100%;
+        height: 50vh; */
+        vertical-align: middle;
+    }
+
+    .myslides {
+        display: none;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0px 0px 3px;
+    }
+
+    .prev:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .number-slide {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+
+    }
+
+    .caption-container {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+    }
+
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .column {
+        float: left;
+        width: 16.66%;
+    }
+
+    .slide {
+        opacity: 0.6;
+    }
+
+    .reactive,
+    .slide:hover {
+        opacity: 1;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #b9b4b4;
+        border-radius: 50%;
+        display: inline-block;
+        transition: #585656 0.6s ease-in-out;
+        cursor: pointer;
+    }
+
+    .reactive {
+        background-color: #222121;
+    }
+
+
+    /* .banner {
+        width: 100%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        padding-top: 4vh;
+    } */
+
+    .title {
+        margin-top: 5vh;
+        text-align: center;
+        padding: 2vw 0;
+        font-size: 2.5vw;
+        font-weight: 550;
+        color: #e2ad23;
+        /* background-color: aqua; */
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: space-evenly;
+        width: 84%;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    .desc {
+        text-align: justify;
+        padding: 4vw 0;
+        line-height: 1.2;
+        font-size: 1.4vw;
+        width: 45%;
+    }
+
+    .img-desc {
+        width: 45%;
+    }
+
+    .img-desc img {
+        width: 100%;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        padding-top: 3.2vw;
+    }
+
+    .btn .regist {
+        width: 10vw;
+        height: 5vh;
+        font-size: 1.4vw;
+        background-color: #ac8314;
+        color: #fff;
+        border: 1px solid;
+        cursor: pointer;
+    }
+
+    .btn .regist:hover {
+        background-color: #e2ad23;
+    }
+
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .social-list a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+                </a>
+            </header>
+            <div id="main-menu">
+                <ul id="nav-main">
+                    <li><a href="">Winners</a>
+                        <ul class="sub-menu">
+                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="medicine.html">Medicine Prize</a></li>
+                            <li><a href="literature.html">Literature Prize</a></li>
+                            <li><a href="peace.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="team-member.html">About Us</a>
+                        <!-- <ul class="sub-menu">
+                            <li><a href="">Alfred Nobel’s life</a></li>
+                            <li><a href="">Alfred Nobel’s will</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="nominations.html">Nomination</a>
+                        <ul class="sub-menu">
+                            <li><a href="nomination_physics.html">Physics Prize</a></li>
+                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
+                            <li><a href="nomination_literature.html">Literature Prize</a></li>
+                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <!-- <i class="fa-thin fa-magnifying-glass"></i> -->
+                </ul>
+            </div>
+        </div>
+        <div class="slideshow-container">
+            <div class="myslides">
+                <!-- <div class="number-slide">1/6</div> -->
+                <img src="img/the nobel-prizes 1.png" style="width: 100%; height:60vh;" alt="">
+            </div>
+            <div class="myslides">
+                <!-- <div class="number-slide">2/6</div> -->
+                <img src="img/literature-1.png" style="width: 100%;height: 60vh;" alt="">
+            </div>
+            <div class="myslides">
+                <!-- <div class="number-slide">3/6</div> -->
+                <img src="img/chemistry-banner-2.png" style="width: 100%; height: 60vh;" alt="">
+            </div>
+            <div class="myslides">
+                <!-- <div class="number-slide">4/6</div> -->
+                <img src="img/literature-2.png" style="width: 100%;height: 60vh;" alt="">
+            </div>
+            <div class="myslides">
+                <!-- <div class="number-slide">5/6</div> -->
+                <img src="img/chemistry-banner-1.png" style="width: 100%;height: 60vh;" alt="">
+            </div>
+            <div class="myslides">
+                <!-- <div class="number-slide">6/6</div> -->
+                <img src="img/chemistry-banner.png" style="width: 100%; height: 60vh;" alt="">
+            </div>
+            <!-- <a class="prev" onclick="plusSlides(-1)">
+                << </a>
+                    <a class="next" onclick="plusSlides(1)"> >> </a>
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img class="slide cursor" src="img/the nobel-prizes 1.png" style="width: 100%;"
+                                onclick="currentSlide(1)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="slide cursor" src="img/literature-1.png" style="width: 100%;"
+                                onclick="currentSlide(2)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="slide cursor" src="img/chemistry-banner-2.png" style="width: 100%;"
+                                onclick="currentSlide(3)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="slide cursor" src="img/literature-2.png" style="width: 100%;"
+                                onclick="currentSlide(4)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="slide cursor" src="img/chemistry-banner-1.png" style="width: 100%;"
+                                onclick="currentSlide(5)" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="slide cursor" src="img/chemistry-banner.png" style="width: 100%;"
+                                onclick="currentSlide(6)" alt="">
+                        </div>
+
+                    </div> -->
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+            <span class="dot" data-index="6"></span>
+
+        </div>
+
+
+        <div class="title">
+            <p>Join With Us</p>
+        </div>
+
+        <div class="main-content">
+            <div class="desc">
+                <h2>Join the Nobel Prize summit today</h2>
+                <p>The volume, velocity and reach of disinformation in today’s world weaken public deliberation and
+                    undermine trust in scientists, the institutions and governments they serve – and democracy itself.
+                    Starting today you can watch online and engage in dialogue with Nobel Prize laureates and other
+                    cross-sectional experts on how to actively combat disinformation, share evidence-based knowledge and
+                    help restore trust.</p>
+                <div class="btn">
+                    <a href="register.html" target="_blank">
+                        <button class="regist">Register Now</button>
+                    </a>
+                </div>
+            </div>
+            <div class="img-desc">
+                <img src="img/register.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+        </div>
+    </footer>
+
+</body>
+<script>
+    let slideIndex = 0;
+
+    let slides = document.getElementsByClassName("myslides");
+    let dots = document.getElementsByClassName("dot");
+    function showSlides1() {
+        if (count % 2 != 0) {
+            return;
+        }
+        let i;
+        let slides = document.getElementsByClassName("myslides");
+        let dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("reactive", "");
+
+        }
+        function run() {
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " reactive";
+        }
+        run()
+
+        setTimeout(showSlides1, 1000);
+
+    }
+    function showSlides2() {
+        if (count % 2 == 0) {
+            return;
+        }
+        let i;
+        let slides = document.getElementsByClassName("myslides");
+        let dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("reactive", "");
+
+        }
+        function run() {
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " reactive";
+        }
+        run()
+
+        setTimeout(showSlides2, 3000);
+
+    }
+    let click_dots = document.querySelectorAll(".dot");
+    let count = 0;
+    if (count == 0) {
+        showSlides1()
+    }
+    click_dots.forEach(dot => {
+        dot.addEventListener('click', event => {
+            const index = event.target.getAttribute('data-index');
+            slideIndex = index - 1;
+            count++;
+            slides[index - 1].style.display = "block";
+            dots[index - 1].className += " reactive";
+            if (count % 2 == 0) {
+                showSlides1()
+            }
+            else {
+                showSlides2()
+            }
+        })
+    })
+
+
+</script>
+
+</html>

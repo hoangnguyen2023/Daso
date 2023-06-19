@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomination page</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+<!-- font:'Hanken Grotesk', sans-serif;
+     font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Roboto', sans-serif;
+color: #ac9e56; -->
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        /* box-sizing: border-box; */
+    }
+
+    body {
+        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+
+    #main-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    #nav-main {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 50px;
+        background-color: #fff;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        padding: 10px;
+        color: #ac9e56;
+        font-size: 20px;
+    }
+
+    #nav-main li {
+        position: relative;
+        list-style: none;
+        padding: 0 30px;
+    }
+
+    #nav-main>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 550;
+        color: #ac9e56;
+        display: block;
+
+    }
+
+    #main-menu>#nav-main>li>a {
+        position: relative;
+    }
+
+    #main-menu>#nav-main>li>a::before {
+        content: "";
+        height: 0.2vh;
+        width: 100%;
+        background-color: #ac8314;
+        position: absolute;
+        bottom: 0px;
+        display: none;
+
+    }
+
+    #main-menu>#nav-main>li:hover>a::before {
+        display: block;
+
+    }
+
+
+    /* #nav-main>li>a:hover {
+        background-color: aqua;
+        border-bottom: 0.4vh solid #ac8314;
+    } */
+
+    #nav-main ul.sub-menu {
+        position: absolute;
+        padding: 15px 0;
+        width: 170px;
+        display: none;
+        background-color: #fff;
+    }
+
+    #nav-main li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #nav-main ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    #nav-main ul.sub-menu li {
+        padding: 10px 0px;
+    }
+
+    #nav-main ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #nav-main ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+    .tile {
+        margin: 3em;
+        text-align: center;
+        /* background-color: gray; */
+
+    }
+
+    .tile span {
+        font-size: 2.5rem;
+        color: #ac8314;
+
+    }
+
+    #container {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: gray; */
+    }
+
+    #container {
+        padding-bottom: 1rem;
+    }
+
+    .banner {
+        /* background-color: #2c3e50; */
+        width: 100%;
+        height: 69vh;
+    }
+
+
+
+
+
+    .banner img {
+        /* background-color: #3498db; */
+        padding: 3vh 0vh 5vh 0vh;
+        width: 100%;
+        height: 65vh;
+    }
+
+    .section-header-top-content {
+        width: 77vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+
+    }
+
+    .figcaption {
+        margin-bottom: 1.2vh;
+    }
+
+    .figcaption-attribution {
+        color: rgb(104, 94, 94);
+    }
+
+
+
+    .figcaption p {
+        display: inline;
+    }
+
+    .nomination-intro {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+    }
+
+    .namination-content {
+        border-top: rgb(232, 224, 224) solid thin;
+
+    }
+
+    .quick-faclist {
+        border-top: rgb(232, 224, 224) solid thin;
+    }
+
+    .quick-faclist a {
+        font-size: 0.5cm;
+        counter-reset: rgb(70, 191, 238);
+
+    }
+
+    ul.nav-faclist {
+        margin-bottom: 2rem;
+        padding-left: 1.2rem;
+    }
+
+    .nav-faclist li {
+        font-size: 0.5cm;
+        font-weight: normal;
+        margin-bottom: 1.2rem;
+        padding-right: 1rem;
+
+    }
+
+
+    .quick-faclist a {
+        text-decoration: none;
+    }
+
+    .namination-content {
+        float: left;
+        width: 67%;
+        height: auto;
+
+    }
+
+    .quick-faclist {
+        float: right;
+        width: 30%;
+        height: auto;
+    }
+
+    .clear-nomination {
+        clear: both;
+    }
+
+    .sub-section-header {
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+    .sub-section-header h4 {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .sub-section-content p {
+        font-family: 'Hanken Grotesk', sans-serif;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+
+    }
+
+    .sub-section-content p em {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-style: italic;
+    }
+
+    .feature-content {
+
+        background-color: #faf8f4;
+    }
+
+    .border-centent {
+
+        /* background-color: aqua; */
+        width: 78vw;
+        height: 80vh;
+        margin-left: 11vw;
+        margin-right: 11vw;
+    }
+
+    .border-top {
+        padding: 5vh 0vh 5vh 0vh;
+
+    }
+
+
+    .border-top h3 {
+        text-transform: capitalize;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        color: #ac8314;
+
+    }
+
+
+    h3.section-header-h3 {
+        font-size: 2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+
+    }
+
+    .section-article-grid {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        border-top: rgb(232, 224, 224) solid thin;
+    }
+
+    .section-header-top {
+        padding: 1.6rem 0rem 1.6rem 0rem;
+
+    }
+
+    .section-header-top h3 {
+        font-size: 1.6rem;
+        font-weight: normal;
+        color: #ac8314;
+    }
+
+    /* .section-wrapper-content {
+        display: inline-flex;
+    } */
+
+    .section-wrapper-content-human {
+        float: left;
+        width: 48%;
+        height: auto;
+        text-align: left;
+        border-top: rgb(232, 224, 224) solid thin;
+
+    }
+
+    .clear-section-content-human {
+        clear: both;
+    }
+
+    .section-wrapper-img {
+        float: right;
+        width: 49%;
+        height: auto;
+    }
+
+    .headline-h1 {
+        margin: 3vh 0vh 3vh 0vh;
+
+    }
+
+    .headline-h1 a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #ac9e56;
+    }
+
+    .content-human-h2 {
+        padding: 3vh 0vh 3vh 0vh;
+
+    }
+
+    .content-human-h2 p {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.1rem;
+
+    }
+
+    .relate {
+        padding-bottom: 1vh;
+    }
+
+    .relate h3 {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    ul.human-evolution {
+        list-style: none;
+        padding: 3vh 0vh 3vh 0vh;
+
+    }
+
+    ul.human-evolution li {
+        padding: 0.5vh 0vh 0.5vh 0vh;
+    }
+
+    ul.human-evolution li a {
+        color: rgb(6, 127, 174);
+        text-decoration: none;
+        font-size: 'Hanken Grotesk', sans-serif;
+        font-size: 1rem;
+    }
+
+    .article-one {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 80vh;
+    }
+
+    .feature-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-title-article-24 {
+        width: 47%;
+        height: 100%;
+
+    }
+
+    .main-title-article-25 {
+
+        width: 49%;
+        height: 100%;
+
+    }
+
+    .text {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.2rem;
+
+    }
+
+    .content-warpper {
+        /* background-color: gray; */
+        width: 100%;
+        height: 40%;
+        padding-top: 1.2vh;
+    }
+
+    .content-warpper {
+        border-top: rgb(225, 218, 218) solid thin;
+    }
+
+    .sub-title {
+        padding: 5vh 0vh 5vh 0vh;
+    }
+
+    .title {
+        margin-bottom: 4vh;
+    }
+
+    .title a {
+        text-decoration: none;
+        color: #ac9e56;
+    }
+
+    .text {
+        text-align: justify;
+    }
+
+    .most-popular-laureates {
+        width: 100%;
+        height: auto;
+        /* padding-bottom: 10vh; */
+        background-color: #fffefc;
+    }
+
+    .section-header-border-top {
+        width: 78vw;
+        height: auto;
+        /* padding: 10vh 0vh; */
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: red; */
+    }
+
+    .section-header-border-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 9vh 0vh;
+        border-top: rgb(218, 213, 213) solid thin;
+    }
+
+
+
+    .acrticle-boder-lauter-top {
+
+        /* display: flex; */
+        width: 33%;
+        height: auto;
+        /* justify-content: space-between; */
+        /* padding: 3vh 0vh; */
+        border-top: rgb(218, 213, 213) solid thin;
+    }
+
+    .content-img img {
+        width: 100%;
+        height: 40vh;
+
+
+    }
+
+    .content-top {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .item-name {
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        padding: 3vh 0vh;
+        font-weight: normal;
+    }
+
+    a.item-name-top {
+        text-decoration: none;
+        color: rgb(6, 127, 174);
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        padding: 3vh 0vh;
+
+    }
+
+
+    .content-top:hover a.item-name-top {
+        color: #ac8314;
+    }
+
+    .figcaption-content p {
+        /* padding: 5vh 0vh; */
+        font-size: 1.1rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+    }
+
+    p.content-top-laureates {
+        padding: 5vh 0vh;
+        font-size: 1.1rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .article-grid-featured-content {
+        width: 100%;
+        background-color: #faf8f4;
+
+    }
+
+    .featured-wrapper-content {
+        width: 78vw;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        border-top: rgb(247, 240, 240) solid thin;
+    }
+
+    .featured-wrapper-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .article-one-third {
+        width: 32%;
+        height: 90vh;
+        /* background-color: rgb(255, 0, 0); */
+
+    }
+
+    .content-wrapper-top {
+        width: 100%;
+        height: 55%;
+        /* background-color: green; */
+        border-top: rgb(155, 153, 153) solid thin;
+    }
+
+    .featureimage {
+        width: 100%;
+        height: 45%;
+        /* background-color: red; */
+    }
+
+    .featureimage .image img {
+        width: 100%;
+        height: 100%;
+        /* background-color: rebeccapurple; */
+    }
+
+    header.content-wrapper-head {
+        padding: 3vh 0vh;
+
+    }
+
+    .content-wrapper-head p {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #ac8314;
+
+
+    }
+
+    .text p {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        font-size: 1.2rem;
+
+    }
+
+    .newsletter-signup {
+        width: 100%;
+        background-color: #fcfbf9;
+    }
+
+    .newsletter-signup-register {
+        width: 78vw;
+        margin-left: 11vw;
+        margin-right: 11vw;
+
+    }
+
+    .newsletter-signup-register-form {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .newsletter-signup-text {
+        width: 48%;
+        padding: 5vh 5vh;
+
+    }
+
+    .newsletter-signup-form {
+        width: 48%;
+        padding: 5vh 5vh;
+
+    }
+
+    .newsletter-signup-form form {
+        padding: 3vh 0vh;
+        font-size: 1.5rem;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+    }
+
+    .newsletter-signup-form form span {
+        font-size: 1.1rem;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .newsletter-signup-text h3 {
+        padding: 3vh 0vh;
+        font-size: 1.4rem;
+        color: #ac8314;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .newsletter-signup-text p {
+        padding: 3vh 0vh;
+        font-size: 1.2rem;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+    }
+
+
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .social-list a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+                </a>
+            </header>
+            <div id="main-menu">
+                <ul id="nav-main">
+                    <li><a href="">Winners</a>
+                        <ul class="sub-menu">
+                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="medicine.html">Medicine Prize</a></li>
+                            <li><a href="literature.html">Literature Prize</a></li>
+                            <li><a href="peace.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="team-member.html">About Us</a>
+                        <!-- <ul class="sub-menu">
+                            <li><a href="">Alfred Nobel’s life</a></li>
+                            <li><a href="">Alfred Nobel’s will</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="nominations.html">Nomination</a>
+                        <ul class="sub-menu">
+                            <li><a href="nomination_physics.html">Physics Prize</a></li>
+                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
+                            <li><a href="nomination_literature.html">Literature Prize</a></li>
+                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="tile">
+            <span>Nobel Prize Summit</span>
+        </div> -->
+        <div class="banner">
+            <img src="img/nomaination.png" alt="">
+        </div>
+        <div id="container">
+            <div class="figcaption">
+                <p class="figcaption-caption">1966 Literature Laureate Nelly Sachs' amethyst stones inspired her writing
+                    by giving her feeling of safety and comfort</p>
+                <p class="figcaption-attribution">&copy; Nobel Media .photo team 1</p>
+            </div>
+
+        </div>
+        <div class="section-header-top-content">
+            <h4>NOMINATION AND SELECTION OF NOBEL PRIZE LAUREATES</h4>
+        </div>
+        <div class="nomination-intro">
+            <div class="namination-content">
+                <header class="sub-section-header">
+                    <h4>Who can nominate?</h4>
+                </header>
+                <div class="sub-section-content">
+                    <p><em>Each year, thousands of members of academies, university professors, scientists, previous
+                            Nobel Prize laureates and members of parliamentary assemblies and others, are asked to
+                            submit candidates for the Nobel Prizes for the coming year. These nominators are chosen in
+                            such a way that as many countries and universities as possible are represented over
+                            time.</em>
+                    </p>
+                    <p>After receiving all nominations, the Nobel Committees of the four prize awarding institutions are
+                        responsible for the selection of the candidates.
+                    </p>
+
+                    <p>
+                        More about the Nobel Prize awarding institutions
+                    </p>
+                </div>
+            </div>
+            <div class="quick-faclist">
+                <header class="sub-section-header">
+                    <h4>Quick facts</h4>
+                </header>
+                <ul class="nav-faclist">
+                    <li>The nomination processes start in September each year.</li>
+                    <li>No person can nominate herself/himself for a Nobel Prize.</li>
+                    <li>The names of the nominees cannot be revealed until 50 years later.</li>
+                    <!-- <li>Youngest laureate: 41</li>
+                    <li>Oldest laureate: 88</li> -->
+                </ul>
+                <p>
+                    <a href="">More facts and figures</a>
+                </p>
+
+            </div>
+            <div class="clear-nomination">
+
+            </div>
+        </div>
+        <div class="section-article-grid">
+            <header class="section-header-top">
+                <h3>Questions and answers</h3>
+            </header>
+            <div class="section-wrapper-content">
+                <div class="section-wrapper-content-human">
+                    <!-- <div class="headline-h1">
+                        <a href="">Annie Ernaux</a>
+                    </div> -->
+                    <div class="content-human-h2">
+                        <p>Can I find out who is nominated for a Nobel Prize?.</p>
+                    </div>
+                    <div class="content-human-h2">
+                        <p>Do you have questions about the Nobel Prize and the nomination process? Find answers to the
+                            most commonly asked questions in the FAQ.</p>
+                    </div>
+                    <div class="relate">
+                        <h3 class="relate-title">Related articles</h3>
+                    </div>
+                    <ul class="human-evolution">
+                        <li><a href="">Press release: The Nobel Prize in Literature 2022</a></li>
+                        <li><a href="">Biobibliography</a></li>
+                        <li><a href="">Telephone interview with Annie Ernaux</a></li>
+                    </ul>
+
+                </div>
+                <div class="section-wrapper-img">
+                    <div class="feature-img">
+                        <img src="img/register.jpg" alt="">
+
+                    </div>
+                    <div class="section-figcaption">
+                        <p class="figcaption-attribution"></p>
+                    </div>
+
+                </div>
+                <div class="clear-section-content-human">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="feature-content">
+        <div class="border-centent">
+            <header class="border-top">
+                <h3 class="section-header-h3">Read the article</h3>
+            </header>
+            <div class="article-one">
+                <div class="main-title-article-24">
+                    <div class="content-warpper">
+                        <header class="content">
+                            <div class="title">
+                                <h2 class="headline-h2">
+                                    <a href="">Controversies and criticism</a>
+                                </h2>
+                            </div>
+                        </header>
+                        <div class="text">
+                            The Nobel Peace Prize has frequently caused controversy. One reason is that many laureates
+                            have been contemporary and highly controversial political actors, another is that the Prizes
+                            in many instances, have increased public focus on international or national conflicts. In
+                            the latter case, the awards have often been seen by local authorities as “interference” in
+                            national matters. On some occasions there has even been strong criticism against the
+                            Norwegian Nobel Committee itself and the way its members are selected.
+                            <!-- <a href="" target="_blank">Watch now</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="main-title-article-25">
+                    <div class="feature-img">
+                        <a href="">
+                            <img src="img/Jane Addams.png" alt="">
+                        </a>
+                        <div class="section-figcaption">
+                            <p class="figcaption-attribution">Jane Addams' nomination for Carl von Ossietzky. It was the
+                                first nomination for the German journalist and pacifist, and it arrived to the Norwegian
+                                Nobel Committee on 15 November 1934. Carl von Ossietzky was awarded the Nobel Peace
+                                Prize in 1935. Photo: Archives of the Norwegian Nobel Committee.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="most-popular-laureates">
+        <div class="section-header-border-top">
+            <div class="acrticle-boder-lauter-top">
+                <div class="content-top">
+                    <p class="item-name">Search the archive</p>
+                    <a href="" class="item-name-top">Learn and explore the nomination archive</a>
+                </div>
+                <div class="content-img">
+                    <img src="img/Bertrand Russell.png" alt="">
+                    <div class="figcaption-content">
+                        <span class="item-name">Bertrand Russell, nominated at 47 occasions and awarded the 1950
+                            Literature
+                            Prize. Photo: Nobel Foundation archive.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="acrticle-boder-lauter-top">
+
+                <div class="content-top">
+                    <p class="item-name">See the nomination list</p>
+                    <a href="" class="item-name-top">Who did Albert Einstein nominate?</a>
+                </div>
+                <div class="content-img">
+                    <img src="img/Albert Einstein.png" alt="">
+                    <div class="figcaption-content">
+                        <span class="item-name">Albert Einstein in his office at the University of Berlin, 1920. Photo:
+                            The Scientific Monthly 10:4 (1920).</span>
+                    </div>
+                </div>
+            </div>
+            <div class="acrticle-boder-lauter-top">
+                <div class="content-top">
+                    <p class="item-name">Explore more here</p>
+                    <a href="" class="item-name-top">Lise Meitner – Nominee in 48 nominations, never awarded</a>
+                </div>
+                <div class="content-img">
+                    <img src="img/Lise Meitner.png" alt="">
+                    <div class="figcaption-content">
+                        <span class="item-name">Lise Meitner around 1906 in Vienna Photo: Public domain.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="article-grid-featured-content">
+        <div class="featured-wrapper-content">
+            <div class="article-one-third">
+                <div class="content-wrapper-top">
+                    <header class="content-wrapper-head">
+                        <p>Candidates for the 1966 Nobel Prize in Literature</p>
+                    </header>
+                    <div class="text">
+                        <p>The archives have now opened up for the 1966 nominations.</p>
+                    </div>
+
+                </div>
+                <div class="featureimage">
+                    <div class="image">
+                        <img src="img/Nelly Sach.png" alt="">
+                    </div>
+                    <div class="figcaption">
+                        <p class="figcaption-caption">Nelly Sachs, awarded the Nobel Prize in Literature 1966.
+                        </p>
+                        <p class="figcaption-attribution">Photo: © Nobel Foundation archive</p>
+                    </div>
+                </div>
+            </div>
+            <div class="article-one-third">
+                <div class="content-wrapper-top">
+                    <header class="content-wrapper-head">
+                        <p>The nomination of Martin Luther King Jr.</p>
+                    </header>
+                    <div class="text">
+                        <p>The first nomination for Martin Luther King Jr. arrived to the Norwegian Nobel Committee in
+                            1963. Not until 2014, the nominators were revealed.</p>
+                    </div>
+
+                </div>
+                <div class="featureimage">
+                    <div class="image">
+                        <img src="img/Martin Luther King.png" alt="">
+                    </div>
+                    <div class="figcaption">
+                        <p class="figcaption-caption">Martin Luther King Jr</p>
+                        <p class="figcaption-attribution">Photo: © Library of Congress.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="article-one-third">
+                <div class="content-wrapper-top">
+                    <header class="content-wrapper-head">
+                        <p>“Mahatma Gandhi - The missing laureate”</p>
+                    </header>
+                    <div class="text">
+                        <p>Mohandas Gandhi (1869-1948) has become the strongest symbol of non-violence in the 20th
+                            century. It is widely held – in retrospect – that the Indian national leader should have
+                            been selected for the Nobel Peace Prize. He was nominated several times, but was never
+                            awarded the prize. Why?</p>
+                    </div>
+
+                </div>
+                <div class="featureimage">
+                    <div class="image">
+                        <img src="img/Mahatma.png" alt="">
+                    </div>
+                    <div class="figcaption">
+                        <p class="figcaption-caption">Mahatma Gandhi laughing</p>
+                        <p class="figcaption-attribution"> Photo:© Public domain.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="newsletter-signup">
+        <div class="newsletter-signup-register">
+            <div class="newsletter-signup-register-form">
+                <div class="newsletter-signup-text">
+                    <h3 class="newsletter-signup-top">Sign up to the "Monthly" newsletter</h3>
+                    <p>Join thousands of global subscribers enjoying the free monthly Nobel Prize highlights, trivia and
+                        up-to-date information.</p>
+                </div>
+                <div class="newsletter-signup-form">
+                    <form action="">
+                        <input type="text" name="email" id="email" placeholder="Your email Adress"
+                            style="width: 70%;height: 5vh;border-radius: 0.1cm;font-size: 1.3rem;">
+                        <input type="button" value="subscribers" name="button" id="button"
+                            style="width: 20%;height: 5vh;border-radius: 0.1cm;background-color:rgb(74, 207, 237); font-size: 1.3rem ; color: #fff;"><br>
+                        <input type="checkbox" name="checkbox" id="checkbox" value=""><span>I consent to my email
+                            address
+                            being used
+                            in accordance with the privacy policy.</span>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

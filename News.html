@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>News</title>
+</head>
+<style>
+    #header {
+        padding-bottom: 4%;
+    }
+
+    .news {
+        display: flex;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        justify-content: space-between;
+        padding-bottom: 4%;
+    }
+
+    .img_news,
+    .content_news {
+        width: 48%;
+    }
+
+    .news img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .title_news {
+        padding-bottom: 4%;
+    }
+
+    .title_news a,
+    .text_news a {
+        text-decoration: none;
+    }
+
+    .title_news a:hover,
+    .text_news a:hover {
+        color: #b9942b;
+    }
+
+    .text_news {
+        text-align: justify;
+        line-height: 1.2;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <header class="logo">
+            <a href="index.htmls">
+                <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+            </a>
+        </header>
+        <div id="main-menu">
+            <ul id="nav-main">
+                <li><a href="">Winners</a>
+                    <ul class="sub-menu">
+                        <li><a href="physics.html">Physics Prize</a></li>
+                        <li><a href="Chemistry.html">Chemistry Prize</a></li>
+                        <li><a href="medicine.html">Medicine Prize</a></li>
+                        <li><a href="literature.html">Literature Prize</a></li>
+                        <li><a href="peace.html">Peace Prize</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About Us</a>
+                    <!-- <ul class="sub-menu">
+                        <li><a href="">Alfred Nobel’s life</a></li>
+                        <li><a href="">Alfred Nobel’s will</a></li>
+                    </ul>  -->
+                </li>
+                <li><a href="nominations.html">Nomination</a>
+                    <ul class="sub-menu">
+                        <li><a href="nomination_physics.html">Physics Prize</a></li>
+                        <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
+                        <li><a href="nomination_medicine.html">Medicine Prize</a></li>
+                        <li><a href="nomination_literature.html">Literature Prize</a></li>
+                        <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                    </ul>
+                </li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Physic News -->
+    <div class="news">
+        <div class="img_news">
+            <img src="./img/content_physic.png">
+        </div>
+        <div class="content_news">
+            <h2 class="title_news"><a href="">Entangled states – from theory to technology</a></h2>
+            <p class="text_news">Alain Aspect, John Clauser and Anton Zeilinger have each conducted groundbreaking
+                experiments using entangled quantum states, where two particles behave like a single unit even when they
+                are separated. Their results have cleared the way for new technology based upon quantum information. <a
+                    href="">[View more]</a></p>
+        </div>
+    </div>
+
+    <!-- Chemistry News -->
+    <div class="news">
+        <div class="img_news">
+            <img src="./img/content2_chemistry.png">
+        </div>
+        <div class="content_news">
+            <h2 class="title_news"><a href="">It just says click – and the molecules are coupled together</a></h2>
+            <p class="text_news">The Nobel Prize in Chemistry 2022 is about making difficult processes easier. Barry
+                Sharpless and Morten Meldal have laid the foundation for a functional form of chemistry – click
+                chemistry – in which molecular building blocks snap together quickly and efficiently. Carolyn Bertozzi
+                has taken click chemistry to a new dimension and started utilising it in living organisms. <a
+                    href="">[View more]</a></p>
+        </div>
+    </div>
+
+    <!-- Medicine News -->
+    <div class="news">
+        <div class="img_news">
+            <img src="./img/content_medicine.png">
+        </div>
+        <div class="content_news">
+            <h2 class="title_news"><a href="">For his discoveries concerning the genomes of extinct hominins and human
+                    evolution</a></h2>
+            <p class="text_news">Humanity has always been intrigued by its origins. Where do we come from, and how are
+                we related to those who came before us? What makes us, Homo sapiens, different from other hominins? <a
+                    href="">[View more]</a></p>
+        </div>
+    </div>
+
+    <!-- Peace News -->
+    <div class="news">
+        <div class="img_news">
+            <img src="./img/content_peace.png">
+        </div>
+        <div class="content_news">
+            <h2 class="title_news"><a href="">The Nobel Peace Prize 2022</a></h2>
+            <p class="text_news">The Peace Prize laureates represent civil society in their home countries. They have
+                for many years promoted the right to criticise power and protect the fundamental rights of citizens.
+                They have made an outstanding effort to document war crimes, human right abuses and the abuse of power.
+                Together they demonstrate the significance of civil society for peace and democracy. <a href="">[View
+                    more]</a></p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="social-list">
+            <a href="https://www.facebook.com/nobelprize/" target="_blank"><i class="ti-facebook"></i></a>
+            <a href="https://www.instagram.com/nobelprize_org/?hl=en" target="_blank"><i class="ti-instagram"></i></a>
+            <a href="https://www.youtube.com/thenobelprize" target="_blank"><i class="ti-youtube"></i></a>
+            <a href="https://twitter.com/NobelPrize" target="_blank"><i class="ti-twitter-alt"></i></a>
+            <a href="https://www.linkedin.com/company/nobelprize/" target="_blank"><i class="ti-linkedin"></i></a>
+        </div>
+        <p class="copyright">Copyright by <a href="">Team 1</a></p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+    /* BASIC HTML */
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
+        /* text-align: justify; */
+        line-height: 1.2;
+    }
+    /* .box-tag{
+          text-align: justify;
+    } */
+
+    /* HEADING NAV BAR */
+    .header__logo {
+        text-align: center;
+        padding: 1.6vh 0;
+        width: 100%;
+    }
+
+    .header__logo img {
+        width: 6%;
+        height: 100%;
+        mix-blend-mode: color-burn;
+    }
+
+    #header__main-menu {
+        width: 100%;
+        height: 4vw;
+    }
+
+    #header__main-menu-title {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 4vw;
+    }
+
+    #header__main-menu-title li {
+        position: relative;
+        list-style: none;
+        padding: 0 3vw;
+    }
+
+    #header__main-menu-title>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.4vw;
+        font-weight: 550;
+        color: #ac8314;
+    }
+
+    #header__main-menu-title>li>a:hover {
+        border-bottom: 0.2vw solid #ac8314;
+    }
+
+    #header__main-menu-title ul.sub-menu {
+        position: absolute;
+        padding: 1.5vh 0;
+        width: 17vw;
+        display: none;
+        background-color: #fff;
+        z-index: 100;
+    }
+
+    #header__main-menu-title li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #header__main-menu-title ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 1.4vw;
+        padding-left: 1.2vw;
+    }
+
+    #header__main-menu-title ul.sub-menu li {
+        padding: 1vh 0;
+    }
+
+    #header__main-menu-title ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #header__main-menu-title ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+    /* HOMEPAGE BODY */
+    .join__heading {
+        margin-top: 22vh;
+        text-align: center;
+        padding: 2vw 0;
+        font-size: 2.5vw;
+        font-weight: 550;
+        color: #e2ad23;
+    }
+
+    .join__main-content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .join__main-content-desc {
+        text-align: justify;
+        line-height: 1.2;
+        font-size: 1.4vw;
+        width: 45%;
+    }
+
+    .join__main-content-desc-info {
+        padding-bottom: 6vw;
+    }
+
+    .join__main-content-desc-h2 {
+        padding-bottom: 10px;
+    }
+
+    .join__main-content-btn {
+        display: flex;
+        justify-content: center;
+        padding: 6.6vw 0;
+    }
+    
+    .join__main-content-btn--regist {
+        position: relative;
+        background: transparent;
+        color: #e2ad23;
+        border: 2px solid #e2ad23;
+        padding: 8px 16px;
+    }
+
+    .join__main-content-btn--regist::before,
+    .join__main-content-btn--regist::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10%;
+        background: #fff;
+        height: 4px;
+        transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .join__main-content-btn--regist::before {
+        right: 20%;
+        top: -3px;
+        transform: skewX(-45deg);
+    }
+
+    .join__main-content-btn--regist::after {
+        left: 20%;
+        bottom: -3px;
+        transform: skewX(45deg);
+    }
+
+    .join__main-content-btn--regist:hover::before {
+        right: 80%;
+    }
+
+    .join__main-content-btn--regist:hover::after {
+        left: 80%;
+    }
+
+    .join__main-content-btn--regist:hover {
+        cursor: pointer;
+    }
+
+    .img-desc {
+        width: 45%;
+    }
+
+    .img-desc img {
+        width: 100%;
+    }
+
+    /* TOP BUTTON */
+    #myBtn {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Fixed/sticky position */
+        bottom: 20px;
+        /* Place the button at the bottom of the page */
+        right: 30px;
+        /* Place the button 30px from the right */
+        z-index: 99;
+        /* Make sure it does not overlap */
+        border: none;
+        /* Remove borders */
+        outline: none;
+        /* Remove outline */
+        background-color: #b9942b;
+        /* Set a background color */
+        color: white;
+        /* Text color */
+        cursor: pointer;
+        /* Add a mouse pointer on hover */
+        padding: 15px;
+        /* Some padding */
+        border-radius: 10px;
+        /* Rounded corners */
+        font-size: 18px;
+        /* Increase font size */
+    }
+
+    #myBtn:hover {
+        background-color: #555;
+        /* Add a dark-grey background on hover */
+    }
+
+    /* FOOTER */
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .copyright a {
+        font-size: 1.8vw;
+        font-weight: 500;
+    }
+
+    #footer .social-list a,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a:hover {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+

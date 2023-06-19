@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        /* box-sizing: border-box; */
+    }
+
+    body {
+        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+
+    #main-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    #nav-main {
+
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 50px;
+        background-color: #fff;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        padding: 10px;
+        color: #ac9e56;
+        font-size: 20px;
+    }
+
+    #nav-main li {
+        position: relative;
+        list-style: none;
+        padding: 0 30px;
+    }
+
+    #nav-main>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 550;
+        color: #ac9e56;
+        display: block;
+
+    }
+
+    #main-menu>#nav-main>li>a {
+        position: relative;
+    }
+
+    #main-menu>#nav-main>li>a::before {
+        content: "";
+        height: 0.2vh;
+        width: 100%;
+        background-color: #ac8314;
+        position: absolute;
+        bottom: 0px;
+        display: none;
+
+    }
+
+    #main-menu>#nav-main>li:hover>a::before {
+        display: block;
+
+    }
+
+
+    /* #nav-main>li>a:hover {
+        background-color: aqua;
+        border-bottom: 0.4vh solid #ac8314;
+    } */
+
+    #nav-main ul.sub-menu {
+        z-index: 2;
+        position: absolute;
+        padding: 15px 0;
+        width: 170px;
+        display: none;
+        background-color: #fff;
+    }
+
+    #nav-main li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #nav-main ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    #nav-main ul.sub-menu li {
+        padding: 10px 0px;
+    }
+
+    #nav-main ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #nav-main ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+    @keyframes colorful {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        outline: none;
+        appearance: none;
+        border-style: none;
+        color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    span,
+    p {
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont,
+            "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira 
+ Sans", " Droid Sans", " Helvetica Neue", sans-serif;
+
+    }
+
+    html,
+    body {
+
+
+        background: #161623;
+        /*scrollbar-width: none;
+    overflow: hidden;
+  
+    &::-webkit-scrollbar {
+      width: 0;
+    }*/
+    }
+
+    body {
+        position: relative;
+
+        /* display: flex; */
+        /* justify-content: center;
+        align-items: center;
+        flex-direction: column; */
+        /* padding: 2em; */
+    }
+
+
+
+    body::-webkit-scrollbar {
+        background: #020202;
+        width: 10px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: #020202;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background: #ffffff;
+        border-radius: 1px;
+    }
+
+    .wrapper {
+        width: 100%;
+        background-color: white;
+        padding-bottom: 5vh;
+    }
+
+    .user-map {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.05);
+        /* padding-top: 5vh; */
+
+    }
+
+    .user-map-content {
+        width: 78vw;
+        height: 80vh;
+        margin-left: 11vw;
+        margin-right: 11vw;
+    }
+
+    .user-map-content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 10vh 0vh;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-map {
+        width: 48%;
+        height: auto;
+        /* background-color: aqua; */
+    }
+
+    .user-input-contact {
+        width: 48%;
+        /* background-color: #020202; */
+
+    }
+
+    .form-contract {
+        display: flex;
+        justify-content: space-between;
+        padding: 2vh 1vh;
+    }
+
+    .user-contact-main form {
+        text-align: justify;
+
+    }
+
+    form .form-contact-button {
+        text-align: center;
+    }
+
+    label {
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    h5 {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        padding: 1vh 1vh;
+
+    }
+
+    textarea {
+        color: #020202;
+        font-size: 0.9rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+    }
+
+    body .container {
+        position: relative;
+        /* z-index: 1; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1em;
+    }
+
+    body .container .card {
+        position: relative;
+        z-index: 0;
+        width: 300px;
+        height: 400px;
+        margin: 1em;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        backdrop-filter: blur(40px);
+        border: solid 2px transparent;
+        background-clip: padding-box;
+        box-shadow: 0px 10px 10px rgba(46, 54, 68, 0.03);
+    }
+
+    body .container .card .content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+
+    body .container .card .content .img {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 10px solid rgba(0, 0, 0, 0.25);
+    }
+
+    body .container .card .content .img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    body .container .card .content .cardContent h3 {
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        margin: 20px 0 10px;
+        line-height: 1.1em;
+    }
+
+    body .container .card .content .cardContent h3 span {
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: initial;
+    }
+
+    body .container .card .sci {
+        z-index: 1;
+        position: absolute;
+        bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    body .container .card .sci li {
+        margin: 0 10px;
+        transform: translateY(40px);
+        opacity: 0;
+        transition: 0.5s;
+        transition-delay: calc(0.1s * var(--i));
+    }
+
+    body .container .card .sci li a {
+        font-size: 24px;
+    }
+
+    body .container .card:hover .content {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+
+    body .container .card:hover .sci li {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .social-list a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+                </a>
+            </header>
+            <div id="main-menu">
+                <ul id="nav-main">
+                    <li><a href="">Winners</a>
+                        <ul class="sub-menu">
+                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="medicine.html">Medicine Prize</a></li>
+                            <li><a href="literature.html">Literature Prize</a></li>
+                            <li><a href="peace.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="team-member.html">About Us</a>
+                        <!-- <ul class="sub-menu">
+                            <li><a href="">Alfred Nobel’s life</a></li>
+                            <li><a href="">Alfred Nobel’s will</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="nominations.html">Nomination</a>
+                        <ul class="sub-menu">
+                            <li><a href="nomination_physics.html">Physics Prize</a></li>
+                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
+                            <li><a href="nomination_literature.html">Literature Prize</a></li>
+                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="user-map">
+        <div class="user-map-content">
+            <div class="user-map-content-wrapper">
+                <div class="main-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.325316305318!2d106.66372207495763!3d10.786376989362955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1685874177754!5m2!1svi!2s"
+                        width="550" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="user-input-contact">
+                    <div class="user-contact-main">
+                        <form action="" onsubmit="return xuat()">
+                            <label for="">Contact:</label>
+                            <div class="form-contract">
+                                <div class="input-type-contact">
+                                    <input type="text" name="name" id="idname" class="inputname" placeholder="Full Name"
+                                        style="width: 18vw; height: 5vh ;color: #020202;"><br><br>
+                                    <input type="text" name="phone" id="idphone" class="inputphone"
+                                        placeholder="Phone Number" style="width: 18vw; height: 5vh ;color: #020202;">
+                                </div>
+                                <div class="input-type-contact-one">
+                                    <input type="text" name="email" id="idemail" class="inputemail"
+                                        placeholder="Your Email"
+                                        style="width: 18vw; height: 5vh ;color: #020202;"><br><br>
+                                    <input type="text" name="title" id="idtitle" class="inputtitle"
+                                        placeholder="Subject" style="width: 18vw; height: 5vh ;color: #020202;">
+                                </div>
+
+                            </div>
+                            <div class="form-contact-button">
+                                <textarea name="commment" id="idcomment" cols="70" rows="10">Comment</textarea><br>
+
+                                <input type="submit" value="submit" name="send" id="idsend" class="send"
+                                    style="width: 18vw; height: 5vh ;color: #141313; background-color: rgb(222, 217, 217);">
+
+                            </div>
+                            <div class="information-contact">
+                                <h5> <i class="fa-solid fa-location-dot" style="color: rgb(222, 217, 217);"></i> Adress
+                                    : 590 Cách Mạng Tháng 8 , Q3 , TP hcm</h5>
+                                <h5><i class="fa-solid fa-phone" style="color:rgb(222, 217, 217) ;"></i> Phone:
+                                </h5>
+                                <h5><i class="fa-solid fa-envelope" style="color:rgb(222, 217, 217) ;"></i> Email:</h5>
+                                <h5>FAQ</h5>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <div class="img"><img src="Nobel Prizes/img/avatar.jpg"></div>
+                <div class="cardContent">
+                    <h3>Dinh Hoang Khanh Linh<br><span>Web Developer</span></h3>
+                </div>
+            </div>
+            <ul class="sci">
+                <li style="--i:1">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                <li style="--i:2">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li style="--i:3">
+                    <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="content">
+                <div class="img"><img src="img/hoang.png"></div>
+                <div class="cardContent">
+                    <h3>Nguyen Quoc Hoang<br><span>Web Developer</span></h3>
+                </div>
+            </div>
+            <ul class="sci">
+                <li style="--i:1">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                <li style="--i:2">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li style="--i:3">
+                    <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="content">
+                <div class="img"><img src="Nobel Prizes/img/avatar.jpg"></div>
+                <div class="cardContent">
+                    <h3>Tran Bao Huy<br><span>Web Developer</span></h3>
+                </div>
+            </div>
+            <ul class="sci">
+                <li style="--i:1">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                <li style="--i:2">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li style="--i:3">
+                    <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+        </div>
+    </footer>
+</body>
+<script>
+    var a = [];
+    function fullname() {
+        var b = document.getElementById("idname").value;
+        var c = /^[a-zA-Z0-9]{5,}$/;
+        var n = "Full Name:" + b;
+        if (c.test(b)) {
+            alert("success");
+            a.push(n);
+            return true;
+        } else {
+            alert("fail");
+            return false;
+        }
+    }
+    function mail() {
+        var b = document.getElementById("idemail").value;
+        var c = /^[A-Za-x-z0-9_]{2,}\@[\w\.\-]{1,}\.[A-Za-z0-9]{1,}$/;
+        var n = "Email:" + b;
+        if (c.test(b)) {
+            alert("Success");
+            a.push(n);
+            return true;
+        } else {
+            alert("Fail");
+            return false;
+        }
+    }
+    function phone() {
+        var b = document.getElementById("idphone").value;
+        var c = /^[a-zA-Z0-9]{8,}$/;
+        var n = "Phone Number:" + b;
+        if (c.test(b)) {
+            alert("success");
+            a.push(n);
+            return true;
+        } else
+            alert("Fail");
+        return false
+    }
+    function title() {
+        var b = document.getElementById("idtitle").value;
+        var n = "Subject:" + b;
+        a.push(n);
+        return true;
+
+    }
+    function comment() {
+        var b = document.getElementById("idcomment").value;
+        var n = "Comment:" + b;
+        a.push(n);
+        return true;
+    }
+
+    function xuat() {
+        if (fullname() && mail() && phone() && title() && comment()) {
+            alert('ok');
+            alert(a.join("\n"));
+            return true;
+        }
+        return false;
+    }
+
+</script>
+
+</html>

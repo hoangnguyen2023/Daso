@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit page</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<!-- font:
+color: #ac9e56; -->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        /* box-sizing: border-box; */
+    }
+
+    body {
+        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+
+    #main-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    #nav-main {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 50px;
+        background-color: #fff;
+    }
+
+    #nav-main li {
+        position: relative;
+        list-style: none;
+        padding: 0 30px;
+    }
+
+    #nav-main>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 550;
+        color: #ac9e56;
+        display: block;
+    }
+
+    #main-menu>#nav-main>li>a {
+        position: relative;
+    }
+
+    #main-menu>#nav-main>li>a::before {
+        content: "";
+        height: 0.2vh;
+        width: 100%;
+        background-color: #ac8314;
+        position: absolute;
+        bottom: 0px;
+        display: none;
+
+    }
+
+    #main-menu>#nav-main>li:hover>a::before {
+        display: block;
+
+    }
+
+    #nav-main ul.sub-menu {
+        position: absolute;
+        padding: 15px 0;
+        width: 170px;
+        display: none;
+        background-color: #fff;
+    }
+
+    #nav-main li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #nav-main ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    #nav-main ul.sub-menu li {
+        padding: 10px 0px;
+    }
+
+    #nav-main ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #nav-main ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+    .tile {
+        margin: 3em;
+        text-align: center;
+        /* background-color: gray; */
+
+    }
+
+    .tile span {
+        font-size: 2.5rem;
+        color: #ac8314;
+
+    }
+
+
+    .banner {
+        width: 100%;
+        /* height: 70vh; */
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    #container {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: gray; */
+    }
+
+    .nav {
+        /* background: rgb(212, 208, 208); */
+        margin: 3rem;
+        /* height: 6vh; */
+    }
+
+    .nav ul {
+
+        text-align: center;
+
+    }
+
+    .nav ul li {
+        list-style: none;
+        display: inline-flex;
+
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        padding: 10px;
+        color: #ac9e56;
+        font-size: 20px;
+    }
+
+    .clip-submit {
+        margin: 1.5rem;
+        text-align: center;
+    }
+
+    .conten1 {
+        padding-bottom: 1cm;
+        font-size: 3rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .conten2 {
+        font-size: 2rem;
+        padding-bottom: 1cm;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .nav1 ul {
+        list-style: none;
+        padding-bottom: 1cm;
+
+    }
+
+    .nav1 ul li a {
+        color: #3498db;
+        font-size: 2rem;
+        text-decoration: none;
+    }
+
+    .nav1 ul li:hover a {
+        color: #2c3e50;
+    }
+
+    .conten3 p {
+        font-size: large;
+        padding-bottom: 0.5cm;
+
+    }
+
+    .conten4 p {
+        font-size: large;
+        padding-bottom: 0.5cm;
+
+    }
+
+    .conten5 p {
+        font-size: large;
+        padding-bottom: 0.5cm;
+
+    }
+
+    .conten6 p {
+        font-size: large;
+        padding-bottom: 0.5cm;
+
+    }
+
+    .feature-content {
+
+        background-color: #faf8f4;
+    }
+
+    .border-centent {
+        /* background-color: #2c3e50; */
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+    }
+
+    .border-top {
+        padding: 5vh 0vh 5vh 0vh;
+
+    }
+
+    .border-top h3 {
+        text-transform: capitalize;
+
+    }
+
+
+    h3.section-header-h3 {
+        font-size: 2rem;
+        font-family: 'Times New Roman', Times, serif;
+
+
+    }
+
+    .article-one {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .feature-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .main-title-article-24 {
+        width: 32%;
+        height: 100%;
+
+    }
+
+    .main-title-article-25 {
+
+        width: 32%;
+        height: 100%;
+
+    }
+
+    .main-title-article-26 {
+
+        width: 32%;
+        height: 100%;
+
+    }
+
+    .content-warpper {
+        /* background-color: gray; */
+        width: 100%;
+        height: 40%;
+        padding-top: 1.2vh;
+    }
+
+    .content-warpper {
+        border-top: rgb(225, 218, 218) solid thin;
+    }
+
+    .sub-title {
+        padding: 5vh 0vh 5vh 0vh;
+    }
+
+    .title {
+        margin-bottom: 4vh;
+    }
+
+    .title a {
+        text-decoration: none;
+        color: #ac9e56;
+    }
+
+    .text {
+        text-align: justify;
+    }
+
+
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .social-list a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header class="logo">
+                <a href="">
+                    <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+                </a>
+            </header>
+            <div id="main-menu">
+                <ul id="nav-main">
+                    <li><a href="">Winners</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Physics Prize</a></li>
+                            <li><a href="">Chemistry Prize</a></li>
+                            <li><a href="">Medicine Prize</a></li>
+                            <li><a href="">Literature Prize</a></li>
+                            <li><a href="">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">About Us</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Alfred Nobel’s life</a></li>
+                            <li><a href="">Alfred Nobel’s will</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Nomination</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Physics Prize</a></li>
+                            <li><a href="">Chemistry Prize</a></li>
+                            <li><a href="">Medicine Prize</a></li>
+                            <li><a href="">Literature Prize</a></li>
+                            <li><a href="">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tile">
+            <span>Nobel Prize Summit</span>
+        </div>
+        <div class="banner">
+            <img src="img/Nobel-Prize-Summit.jpg" alt="">
+        </div>
+        <div class="title">
+            <p>Join With Us</p>
+        </div>
+        <div class="col main-content">
+            <div class="col-half desc">
+                <h2 class="topic">Join the Nobel Prize summit today</h2>
+                <p>How can we build trust in truth, facts and scientific evidence so that we can create a hopeful future
+                    for all?</p><br>
+                <p>Nobel Prize Summit brought together laureates, leading experts and the general public in a
+                    conversation on how we can combat disinformation, restore trust in science and create a hopeful
+                    future.</p>
+                <div class="btn">
+                    <a href="#">
+                        <button class="regist">Register Now</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-half img-desc">
+                <img src="img/register.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <header>
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+        </div>
+
+    </header>
+
+
+</body>
+
+</html>

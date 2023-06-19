@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry-news page</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+<!-- font:
+color: #ac9e56; 
+color fig:#7f8c8d-->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        /* box-sizing: border-box; */
+    }
+
+    body {
+        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+
+    #main-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    #nav-main {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 50px;
+        background-color: #fff;
+    }
+
+    #nav-main li {
+        position: relative;
+        list-style: none;
+        padding: 0 30px;
+    }
+
+    #nav-main>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 550;
+        color: #ac9e56;
+        display: block;
+    }
+
+    #main-menu>#nav-main>li>a {
+        position: relative;
+    }
+
+    #main-menu>#nav-main>li>a::before {
+        content: "";
+        height: 0.2vh;
+        width: 100%;
+        background-color: #ac8314;
+        position: absolute;
+        bottom: 0px;
+        display: none;
+
+    }
+
+    #main-menu>#nav-main>li:hover>a::before {
+        display: block;
+
+    }
+
+    #nav-main ul.sub-menu {
+        position: absolute;
+        padding: 15px 0;
+        width: 170px;
+        display: none;
+        background-color: #fff;
+    }
+
+    #nav-main li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #nav-main ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    #nav-main ul.sub-menu li {
+        padding: 10px 0px;
+    }
+
+    #nav-main ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #nav-main ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+    .section-baner-header {
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .section-baner-header img {
+        width: 100%;
+        height: 90vh;
+        padding-top: 5vh;
+    }
+
+    .section-baner-header p {
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        color: #7f8c8d;
+        text-align: center;
+
+    }
+
+    .section-container {
+        width: 100%;
+        padding: 5vh 0vh;
+        /* background-color: aqua; */
+
+    }
+
+    .container-section-content {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: blueviolet; */
+
+    }
+
+    .container-section-content p {
+        padding: 3vh 0vh;
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        /* color: #7f8c8d; */
+        text-align: center;
+
+    }
+
+    .container-section-content span {
+        color: #ac8314;
+        font-weight: bold;
+    }
+
+    .title {
+        padding: 8vh 0vh;
+
+    }
+
+    .title h5 {
+        font-size: 2.8rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: center;
+        color: #ac9e56;
+    }
+
+    .entry-page-content p {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+
+    }
+
+    .main-content-border .clip-video {
+        text-align: center;
+    }
+
+    .main-content-border h3 {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        padding: 3vh 0vh;
+        color: #ac9e56;
+
+    }
+
+    .main-content-border p {
+        font-size: 1.3rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        padding: 1vh 0vh;
+
+    }
+
+    .main-content-border a {
+        text-decoration: none;
+        color: #ac9e56;
+    }
+
+    .article-grid-feature-content {
+        padding: 3vh 0vh;
+        /* background-color: blue; */
+        border-top: #7f8c8d solid thin;
+        border-bottom: #7f8c8d solid thin;
+
+    }
+
+    .article-grid-feature-content h3 {
+        font-size: 2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        /* align-items: center; */
+        padding: 2vh 0vh;
+        color: #ac9e56;
+
+    }
+
+    .article-half-content {
+        display: flex;
+        justify-content: space-between;
+        /* background-color: chartreuse; */
+        padding: 3vh 0vh;
+    }
+
+    .article-half-content-one {
+        width: 48%;
+        border-top: #7f8c8d solid thin;
+    }
+
+    .article-half-content-one p {
+        font-size: 1.3rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        /* align-items: center; */
+        padding: 2vh 0vh;
+
+    }
+
+    .image-content {
+        width: 48%;
+
+    }
+
+    .image-content img {
+        width: 100%;
+
+    }
+
+    .page-content-prize-introduction-border a {
+        text-decoration: none;
+
+    }
+
+    .page-content-prize-introduction-border h3 {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        padding: 2vh 0vh;
+        /* color: #ac9e56; */
+    }
+
+    .page-content-prize-introduction-border p {
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        color: #5f6263;
+    }
+
+    .list-laureates-border-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2vh 0vh;
+    }
+
+    .list-laureate {
+        width: 32%;
+    }
+
+    .list-laureate img {
+        width: 100%;
+        height: 55vh;
+    }
+
+    .border-top-pages p {
+        font-size: 1.3rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        /* color: #7f8c8d; */
+
+    }
+
+
+
+
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .social-list a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+                </a>
+            </header>
+            <div id="main-menu">
+                <ul id="nav-main">
+                    <li><a href="">Winners</a>
+                        <ul class="sub-menu">
+                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="medicine.html">Medicine Prize</a></li>
+                            <li><a href="literature.html">Literature Prize</a></li>
+                            <li><a href="peace.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="team-member.html">About Us</a>
+                        <!-- <ul class="sub-menu">
+                            <li><a href="">Alfred Nobel’s life</a></li>
+                            <li><a href="">Alfred Nobel’s will</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="nominations.html">Nomination</a>
+                        <ul class="sub-menu">
+                            <li><a href="nomination_physics.html">Physics Prize</a></li>
+                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
+                            <li><a href="nomination_literature.html">Literature Prize</a></li>
+                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section-baner-header">
+        <img src="img/chemistry-banner.png" alt="">
+        <p>Ill. Niklas Elmehed © Nobel Prize Outreach</p>
+    </div>
+    <div class="section-container">
+        <div class="container-section-content">
+            <div class="title">
+                <h5>for the development of click chemistry and bioorthogonal chemistry</h5>
+            </div>
+            <div class="page-content-border-top">
+                <div class="entry-page-content">
+                    <p>The Nobel Prize in Chemistry 2022 is about making difficult processes easier. Barry Sharpless and
+                        Morten Meldal have laid the foundation for a functional form of chemistry – click chemistry – in
+                        which molecular building blocks snap together quickly and efficiently. Carolyn Bertozzi has
+                        taken click chemistry to a new dimension and started utilising it in living organisms.</p>
+                </div>
+                <div class="entry-page-content">
+                    <p>Chemists have long been driven by the desire to build increasingly complicated molecules. In
+                        pharmaceutical research, this has often involved artificially recreating natural molecules with
+                        medicinal properties. This has led to many admirable molecular constructions, but these are
+                        generally time consuming and very expensive to produce.</p>
+                    <p>“This year’s Prize in Chemistry deals with not overcomplicating matters, instead working with
+                        what is easy and simple. Functional molecules can be built even by taking a straightforward
+                        route,” says Johan Åqvist, Chair of the Nobel Committee for Chemistry.</p>
+                </div>
+                <div class="entry-page-content">
+                    <p>Barry Sharpless – who is now being awarded his second Nobel Prize in Chemistry – started the ball
+                        rolling. Around the year 2000, he coined the concept of click chemistry, which is a form of
+                        simple and reliable chemistry, where reactions occur quickly and unwanted by-products are
+                        avoided.</p>
+                    <p>Shortly afterwards, Morten Meldal and Barry Sharpless – independently of each other – presented
+                        what is now the crown jewel of click chemistry: the copper catalysed azide-alkyne cycloaddition.
+                        This is an elegant and efficient chemical reaction that is now in widespread use. Among many
+                        other uses, it is utilised in the development of pharmaceuticals, for mapping DNA and creating
+                        materials that are more fit for purpose.</p>
+                    <p><span>Carolyn Bertozzi</span> took click chemistry to a new level. To map important but elusive
+                        biomolecules
+                        on the surface of cells – glycans – she developed click reactions that work inside living
+                        organisms. Her bioorthogonal reactions take place without disrupting the normal chemistry of the
+                        cell.</p>
+                    <p><span>Carolyn R. Bertozzi</span> born 1966 in USA. PhD 1993 from UC Berkeley, CA, USA. Anne T.
+                        and
+                        Robert M.
+                        Bass Professor at Stanford University, CA, USA and Investigator, Howard Hughes Medical
+                        Institute, USA.</p>
+                    <p><span>Morten Meldal</span> born 1954 in Denmark. PhD 1986 from Technical University of Denmark,
+                        Lyngby,
+                        Denmark. Professor at University of Copenhagen, Denmark.</p>
+                    <p><span>K. Barry Sharpless</span> born 1941 in Philadelphia, PA, USA. PhD 1968 from Stanford
+                        University, CA,
+                        USA. W. M. Keck Professor at Scripps Research, La Jolla, CA, USA.</p>
+                </div>
+
+
+            </div>
+            <div class="main-content">
+                <div class="main-content-border">
+                    <h3>1. Show the slideshow (15 min)</h3>
+                    <p>Show the slides, using the speaker’s manuscript.</p>
+                    <div class="target-slide">
+                        <p><a href="pdf/Slideshow_Peace_2022_NobelPrizeLessons.pdf">Slideshow (PDF 1,9 MB)</a></p>
+
+                    </div>
+                    <h3>2. Show the interview (5 min)</h3>
+                    <div class="clip-video">
+                        <iframe width="860" height="555" src="https://www.youtube.com/embed/Sk2HRsz4MV0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <h3>3. Student assignment (15 min)</h3>
+                    <p>Let the students work with the assignment.</p>
+                    <div class="target-slide-one">
+                        <p><a href="img/Assignments_Peace_2022_NobelPrizelessons.pdf">Student assignment (PDF 70 Kb)</a>
+                        </p>
+                    </div>
+                    <h3>4. Conclusion (10 min)</h3>
+                    <p>Summarise the work with the assignment and capture any questions from the students.</p>
+                    <h3>Links for further information</h3>
+                    <div class="target-conclusion">
+                        <p><a href="">Press release for the 2022 Nobel Peace Prize</a></p>
+                    </div>
+                    <p>A Swedish version of the lesson is available at nobelprizemuseum.se</p>
+                    <p>More about the Nobel Prize and its founder in the lesson “Alfred Nobel and the Nobel Prize”</p>
+                </div>
+                <div class="article-grid-feature-content">
+                    <h3>Nobel Prizes and laureates</h3>
+                    <div class="article-half-content">
+                        <div class="article-half-content-one">
+                            <h3 class="title-article">Nobel Prizes 2022</h3>
+                            <p>Fourteen laureates were awarded a Nobel Prize in 2022, for achievements that have
+                                conferred the greatest benefit to humankind. Their work and discoveries range from
+                                paleogenomics and click chemistry to documenting war crimes.</p>
+                        </div>
+                        <div class="image-content">
+                            <img src="img/Nobel Prizes 2022.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="page-content-prize-introduction-border">
+                <div class="heading">
+                    <h3>The Nobel Prize in Chemistry 2022</h3>
+                </div>
+                <div class="list-laureates-border-top">
+                    <div class="list-laureate">
+                        <div class="img">
+                            <img src="img/Carolyn R. Bertozzi.png" alt="">
+                        </div>
+                        <div class="figcaption">
+                            <p>© Nobel Prize Outreach. Photo: Stefan Bladh</p>
+                            <h3 class="name"> <a href="">Carolyn R. Bertozzi</a></h3>
+                            <p>Prize share: 1/3</p>
+                        </div>
+
+                    </div>
+                    <div class="list-laureate">
+                        <div class="img">
+                            <img src="img/Morten Meldal.png" alt="">
+                        </div>
+                        <div class="figcaption">
+                            <p>© Nobel Prize Outreach. Photo: Stefan Blad</p>
+                            <h3 class="name"><a href="">Morten Meldal</a></h3>
+                            <p>Prize share: 1/3</p>
+                        </div>
+
+                    </div>
+                    <div class="list-laureate">
+                        <div class="img">
+                            <img src="img/Barry Sharpless.png" alt="">
+                        </div>
+                        <div class="figcaption">
+                            <p>© Nobel Prize Outreach. Photo: Stefan Blad</p>
+                            <h3 class="name"> <a href="">K. Barry Sharpless</a></h3>
+                            <p>Prize share: 1/3</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="border-top-pages">
+                <div class="header-page">
+                    <p>The Nobel Prize in Chemistry 2022 was awarded jointly to Carolyn R. Bertozzi, Morten Meldal and
+                        K. Barry Sharpless "for the development of click chemistry and bioorthogonal chemistry"</p>
+                </div>
+                <div class="main-pages">
+                    <p>The Nobel Prize in Chemistry 2022 is about making difficult processes easier. Barry Sharpless and
+                        Morten Meldal have laid the foundation for a functional form of chemistry – click chemistry – in
+                        which molecular building blocks snap together quickly and efficiently. Carolyn Bertozzi has
+                        taken click chemistry to a new dimension and started utilising it in living organisms.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

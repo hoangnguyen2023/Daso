@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>literature page</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+<!-- font:'Hanken Grotesk', sans-serif;
+     font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Roboto', sans-serif;
+color: #ac9e56; -->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        /* box-sizing: border-box; */
+    }
+
+    body {
+        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+
+    #main-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    #nav-main {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 50px;
+        background-color: #fff;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        padding: 10px;
+        color: #ac9e56;
+        font-size: 20px;
+    }
+
+    #nav-main li {
+        position: relative;
+        list-style: none;
+        padding: 0 30px;
+    }
+
+    #nav-main>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 550;
+        color: #ac9e56;
+        display: block;
+
+    }
+
+    #main-menu>#nav-main>li>a {
+        position: relative;
+    }
+
+    #main-menu>#nav-main>li>a::before {
+        content: "";
+        height: 0.2vh;
+        width: 100%;
+        background-color: #ac8314;
+        position: absolute;
+        bottom: 0px;
+        display: none;
+
+    }
+
+    #main-menu>#nav-main>li:hover>a::before {
+        display: block;
+
+    }
+
+
+    /* #nav-main>li>a:hover {
+        background-color: aqua;
+        border-bottom: 0.4vh solid #ac8314;
+    } */
+
+    #nav-main ul.sub-menu {
+        position: absolute;
+        padding: 15px 0;
+        width: 170px;
+        display: none;
+        background-color: #fff;
+    }
+
+    #nav-main li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #nav-main ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    #nav-main ul.sub-menu li {
+        padding: 10px 0px;
+    }
+
+    #nav-main ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #nav-main ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+    .tile {
+        margin: 3em;
+        text-align: center;
+        /* background-color: gray; */
+
+    }
+
+    .tile span {
+        font-size: 2.5rem;
+        color: #ac8314;
+
+    }
+
+    #container {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: gray; */
+    }
+
+    #container {
+        padding-bottom: 1rem;
+    }
+
+    .banner {
+        /* background-color: #2c3e50; */
+        width: 100%;
+        height: 69vh;
+    }
+
+
+
+
+
+    .banner img {
+        /* background-color: #3498db; */
+        padding: 3vh 0vh 5vh 0vh;
+        width: 100%;
+        height: 65vh;
+    }
+
+    .figcaption {
+        margin-bottom: 1.2vh;
+    }
+
+    .figcaption-attribution {
+        color: rgb(104, 94, 94);
+    }
+
+
+
+    .figcaption p {
+        display: inline;
+    }
+
+    .nomination-intro {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+    }
+
+    .namination-content {
+        border-top: rgb(232, 224, 224) solid thin;
+
+    }
+
+    .quick-faclist {
+        border-top: rgb(232, 224, 224) solid thin;
+    }
+
+    .quick-faclist a {
+        font-size: 0.5cm;
+        counter-reset: rgb(70, 191, 238);
+
+    }
+
+    ul.nav-faclist {
+        margin-bottom: 2rem;
+        padding-left: 1.2rem;
+    }
+
+    .nav-faclist li {
+        font-size: 0.5cm;
+        font-weight: normal;
+        margin-bottom: 1.2rem;
+        padding-right: 1rem;
+
+    }
+
+    .quick-faclist a {
+        text-decoration: none;
+    }
+
+    .namination-content {
+        float: left;
+        width: 67%;
+        height: auto;
+
+    }
+
+    .quick-faclist {
+        float: right;
+        width: 30%;
+        height: auto;
+    }
+
+    .clear-nomination {
+        clear: both;
+    }
+
+    .sub-section-header {
+        margin: 1.5em 0em 1.5em 0em;
+    }
+
+    .sub-section-header h4 {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .sub-section-content p {
+        font-family: 'Hanken Grotesk', sans-serif;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+
+    }
+
+    .sub-section-content p em {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-style: italic;
+    }
+
+    .feature-content {
+
+        background-color: #faf8f4;
+    }
+
+    .border-centent {
+
+        /* background-color: #2c3e50; */
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+    }
+
+    .border-top {
+        padding: 5vh 0vh 5vh 0vh;
+
+    }
+
+
+    .border-top h3 {
+        text-transform: capitalize;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        color: #ac8314;
+
+    }
+
+
+    h3.section-header-h3 {
+        font-size: 2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+
+    }
+
+    .section-article-grid {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        border-top: rgb(232, 224, 224) solid thin;
+    }
+
+    .section-header-top {
+        padding: 1.6rem 0rem 1.6rem 0rem;
+
+    }
+
+    .section-header-top h3 {
+        font-size: 1.6rem;
+        font-weight: normal;
+        color: #ac8314;
+    }
+
+    /* .section-wrapper-content {
+        display: inline-flex;
+    } */
+
+    .section-wrapper-content-human {
+        float: left;
+        width: 48%;
+        height: auto;
+        text-align: left;
+        border-top: rgb(232, 224, 224) solid thin;
+
+    }
+
+    .clear-section-content-human {
+        clear: both;
+    }
+
+    .section-wrapper-img {
+        float: right;
+        width: 49%;
+        height: auto;
+    }
+
+    .headline-h1 {
+        margin: 3vh 0vh 3vh 0vh;
+
+    }
+
+    .headline-h1 a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #ac9e56;
+    }
+
+    .content-human-h2 {
+        padding: 3vh 0vh 3vh 0vh;
+
+    }
+
+    .content-human-h2 p {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.1rem;
+
+    }
+
+    .relate {
+        padding-bottom: 1vh;
+    }
+
+    .relate h3 {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    ul.human-evolution {
+        list-style: none;
+        padding: 3vh 0vh 3vh 0vh;
+
+    }
+
+    ul.human-evolution li {
+        padding: 0.5vh 0vh 0.5vh 0vh;
+    }
+
+    ul.human-evolution li a {
+        color: rgb(6, 127, 174);
+        text-decoration: none;
+        font-size: 'Hanken Grotesk', sans-serif;
+        font-size: 1rem;
+    }
+
+
+
+
+    .article-one {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 60vh;
+    }
+
+    .feature-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-title-article-24 {
+        width: 47%;
+        height: 100%;
+
+    }
+
+    .main-title-article-25 {
+
+        width: 49%;
+        height: 100%;
+
+    }
+
+    .text {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.2rem;
+
+    }
+
+    .content-warpper {
+        /* background-color: gray; */
+        width: 100%;
+        height: 40%;
+        padding-top: 1.2vh;
+    }
+
+    .content-warpper {
+        border-top: rgb(225, 218, 218) solid thin;
+    }
+
+    .sub-title {
+        padding: 5vh 0vh 5vh 0vh;
+    }
+
+    .title {
+        margin-bottom: 4vh;
+    }
+
+    .title a {
+        text-decoration: none;
+        color: #ac9e56;
+    }
+
+    .text {
+        text-align: justify;
+    }
+
+    .most-popular-laureates {
+        width: 100%;
+        height: auto;
+        /* padding-bottom: 10vh; */
+        background-color: #fffefc;
+    }
+
+    .section-header-border-top {
+        width: 78vw;
+        height: auto;
+        /* padding: 10vh 0vh; */
+        margin-left: 11vw;
+        margin-right: 11vw;
+    }
+
+    .section-header-border-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 9vh 0vh;
+        border-top: rgb(218, 213, 213) solid thin;
+    }
+
+    .section-header-border-top-1 {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+
+    }
+
+    .section-header-border-top-1 {
+        display: flex;
+        justify-content: space-between;
+        padding: 3vh 0vh;
+    }
+
+    .section-header-border-top-2 {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+
+    }
+
+    .section-header-border-top-2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 3vh 0vh;
+
+
+    }
+
+    .acrticle-boder-lauter-top {
+
+        display: flex;
+        width: 47%;
+        height: auto;
+        justify-content: space-between;
+        padding: 3vh 0vh;
+        border-top: rgb(218, 213, 213) solid thin;
+    }
+
+    .content-img {
+        width: 45%;
+
+
+    }
+
+    .content-top {
+        width: 50%;
+    }
+
+    .item-name {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.5rem;
+        padding-bottom: 5vh;
+        font-weight: normal;
+    }
+
+    a.item-name-top {
+        text-decoration: none;
+        color: rgb(6, 127, 174);
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        /* padding-bottom: 5vh; */
+    }
+
+    .content-top:hover a.item-name-top {
+        color: #ac8314;
+    }
+
+    p.content-top-laureates {
+        padding: 5vh 0vh;
+        font-size: 1.1rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .article-grid-featured-content {
+        width: 100%;
+        background-color: #faf8f4;
+
+    }
+
+    .featured-wrapper-content {
+        width: 78vw;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        border-top: rgb(247, 240, 240) solid thin;
+    }
+
+    .featured-wrapper-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .article-one-third {
+        width: 32%;
+        height: 90vh;
+        /* background-color: rgb(255, 0, 0); */
+
+    }
+
+    .content-wrapper-top {
+        width: 100%;
+        height: 55%;
+        /* background-color: green; */
+        border-top: rgb(155, 153, 153) solid thin;
+    }
+
+    .featureimage {
+        width: 100%;
+        height: 45%;
+        /* background-color: red; */
+    }
+
+    .featureimage .image img {
+        width: 100%;
+        height: 100%;
+        /* background-color: rebeccapurple; */
+    }
+
+    header.content-wrapper-head {
+        padding: 3vh 0vh;
+
+    }
+
+    .content-wrapper-head p {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #ac8314;
+
+
+    }
+
+    .text p {
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        font-size: 1.2rem;
+
+    }
+
+    .newsletter-signup {
+        width: 100%;
+        background-color: #fcfbf9;
+    }
+
+    .newsletter-signup-register {
+        width: 78vw;
+        margin-left: 11vw;
+        margin-right: 11vw;
+
+    }
+
+    .newsletter-signup-register-form {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .newsletter-signup-text {
+        width: 48%;
+        padding: 5vh 5vh;
+
+    }
+
+    .newsletter-signup-form {
+        width: 48%;
+        padding: 5vh 5vh;
+
+    }
+
+    .newsletter-signup-form form {
+        padding: 3vh 0vh;
+        font-size: 1.5rem;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+    }
+
+    .newsletter-signup-form form span {
+        font-size: 1.1rem;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .newsletter-signup-text h3 {
+        padding: 3vh 0vh;
+        font-size: 1.4rem;
+        color: #ac8314;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .newsletter-signup-text p {
+        padding: 3vh 0vh;
+        font-size: 1.2rem;
+        font-weight: normal;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+    }
+
+
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .social-list a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+                </a>
+            </header>
+            <div id="main-menu">
+                <ul id="nav-main">
+                    <li><a href="">Winners</a>
+                        <ul class="sub-menu">
+                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="medicine.html">Medicine Prize</a></li>
+                            <li><a href="literature.html">Literature Prize</a></li>
+                            <li><a href="peace.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="team-member.html">About Us</a>
+                        <!-- <ul class="sub-menu">
+                            <li><a href="">Alfred Nobel’s life</a></li>
+                            <li><a href="">Alfred Nobel’s will</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="nominations.html">Nomination</a>
+                        <ul class="sub-menu">
+                            <li><a href="nomination_physics.html">Physics Prize</a></li>
+                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
+                            <li><a href="nomination_literature.html">Literature Prize</a></li>
+                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="tile">
+            <span>Nobel Prize Summit</span>
+        </div> -->
+        <div class="banner">
+            <img src="img/literature.jpg" alt="">
+        </div>
+        <div id="container">
+            <div class="figcaption">
+                <p class="figcaption-caption">1966 Literature Laureate Nelly Sachs' amethyst stones inspired her writing
+                    by giving her feeling of safety and comfort</p>
+                <p class="figcaption-attribution">&copy; Nobel Media .photo team 1</p>
+            </div>
+
+        </div>
+        <div class="nomination-intro">
+            <div class="namination-content">
+                <header class="sub-section-header">
+                    <h4>About the prize</h4>
+                </header>
+                <div class="sub-section-content">
+                    <p><em>“The said interest shall be divided into five equal parts, which shall be apportioned as
+                            follows: /- – -/ one part to the person who shall have produced in the field of literature
+                            the most outstanding work in an ideal direction …” (Excerpt from the will of Alfred
+                            Nobel)</em>
+                    </p>
+                    <p>Alfred Nobel had broad cultural interests. During his early youth, he developed his literary
+                        interests which lasted throughout his life. His library consisted of a rich and broad selection
+                        of literature in different languages. During the last years of his life, he tried his hand as an
+                        author and began writing fiction. Literature was the fourth prize area Nobel mentioned in his
+                        will.
+                    </p>
+
+                    <p>
+                        See all literature laureates or learn about the nomination process.
+                    </p>
+                </div>
+            </div>
+            <div class="quick-faclist">
+                <header class="sub-section-header">
+                    <h4>Quick facts</h4>
+                </header>
+                <ul class="nav-faclist">
+                    <li>Literature prizes: 115</li>
+                    <li>Literature laureates: 119</li>
+                    <li>Awarded women: 17</li>
+                    <li>Youngest laureate: 41</li>
+                    <li>Oldest laureate: 88</li>
+                </ul>
+                <p>
+                    <a href="">More facts and figures</a>
+                </p>
+
+            </div>
+            <div class="clear-nomination">
+
+            </div>
+        </div>
+        <div class="section-article-grid">
+            <header class="section-header-top">
+                <h3>The Nobel Prize in Literature 2022</h3>
+            </header>
+            <div class="section-wrapper-content">
+                <div class="section-wrapper-content-human">
+                    <div class="headline-h1">
+                        <a href="">Annie Ernaux</a>
+                    </div>
+                    <div class="content-human-h2">
+                        <p>The Nobel Prize in Literature for 2022 is awarded to the French author Annie Ernaux “for the
+                            courage and clinical acuity with which she uncovers the roots, estrangements and collective
+                            restraints of personal memory”.</p>
+                    </div>
+                    <div class="content-human-h2">
+                        <p>In her writing, Ernaux consistently and from different angles, examines a life marked by
+                            strong disparities regarding gender, language and class. Her path to authorship was long and
+                            arduous.</p>
+                    </div>
+                    <div class="relate">
+                        <h3 class="relate-title">Related articles</h3>
+                    </div>
+                    <ul class="human-evolution">
+                        <li><a href="literature-new.html">Press release: The Nobel Prize in Literature 2022</a></li>
+                        <li><a href="">Biobibliography</a></li>
+                        <li><a href="">Telephone interview with Annie Ernaux</a></li>
+                    </ul>
+
+                </div>
+                <div class="section-wrapper-img">
+                    <div class="feature-img">
+                        <img src="img/Annie Ernaux.png" alt="">
+
+                    </div>
+                    <div class="section-figcaption">
+                        <p class="figcaption-attribution">© Nobel Prize Outreach. Photo: Monica Mileur</p>
+                    </div>
+
+                </div>
+                <div class="clear-section-content-human">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="feature-content">
+        <div class="border-centent">
+            <header class="border-top">
+                <h3 class="section-header-h3">Book tips</h3>
+            </header>
+            <div class="article-one">
+                <div class="main-title-article-24">
+                    <div class="content-warpper">
+                        <header class="content">
+                            <div class="title">
+                                <h2 class="headline-h2">
+                                    <a href="">What to read?</a>
+                                </h2>
+                            </div>
+                        </header>
+                        <div class="text">
+                            Curious about 2022 literature laureate Annie Ernaux but can’t decide which of her books to
+                            start with? Here three members of the Swedish Academy give their recommendations.
+                            <a href="" target="_blank">Watch now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-title-article-25">
+                    <div class="feature-img">
+                        <a href="">
+                            <img src="img/annie.png" alt="">
+                        </a>
+                        <div class="section-figcaption">
+                            <p class="figcaption-attribution">© Nobel Prize Outreach. Photo: Monica Mileur</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="most-popular-laureates">
+        <div class="section-header-border-top">
+            <div class="acrticle-boder-lauter-top">
+                <div class="content-img">
+                    <img src="img/Rabindranath Tagore.png" alt="">
+                </div>
+                <div class="content-top">
+                    <h4 class="item-name">Rabindranath Tagore</h4>
+                    <a href="" class="item-name-top">The Nobel Prize in Literature 1913</a>
+                    <p class="content-top-laureates">"because of his profoundly sensitive, fresh and beautiful verse, by
+                        which, with consummate skill, he has made his poetic thought, expressed in his own English
+                        words, a part of the literature of the West."</p>
+
+                </div>
+
+            </div>
+            <div class="acrticle-boder-lauter-top">
+                <div class="content-img">
+                    <img src="img/Bob Dylan.png" alt="">
+                </div>
+                <div class="content-top">
+                    <h4 class="item-name">Bob Dylan</h4>
+                    <a href="" class="item-name-top">The Nobel Prize in Literature 2016</a>
+                    <p class="content-top-laureates">"for having created new poetic expressions within the great
+                        American song tradition."
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="section-header-border-top-1">
+            <div class="acrticle-boder-lauter-top">
+                <div class="content-img">
+                    <img src="img/Toni Morrison.png" alt="">
+                </div>
+                <div class="content-top">
+                    <h4 class="item-name">Toni Morrison</h4>
+                    <a href="" class="item-name-top">The Nobel Prize in Literature 1993</a>
+                    <p class="content-top-laureates">"who in novels characterized by visionary force and poetic import,
+                        gives life to an essential aspect of American reality."</p>
+
+                </div>
+
+            </div>
+            <div class="acrticle-boder-lauter-top">
+                <div class="content-img">
+                    <img src="img/Wislawa Szymborska.png" alt="">
+                </div>
+                <div class="content-top">
+                    <h4 class="item-name">Wislawa Szymborska</h4>
+                    <a href="" class="item-name-top">The Nobel Prize in Literature 1996</a>
+                    <p class="content-top-laureates">"for poetry that with ironic precision allows the historical and
+                        biological context to come to light in fragments of human reality."
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="section-header-border-top-2">
+            <div class="acrticle-boder-lauter-top">
+                <div class="content-img">
+                    <img src="img/Ernest Miller Hemingway.png" alt="">
+                </div>
+                <div class="content-top">
+                    <h4 class="item-name">Ernest Miller Hemingway</h4>
+                    <a href="" class="item-name-top">The Nobel Prize in Literature 1954</a>
+                    <p class="content-top-laureates">"for her discovery of mobile genetic elements."</p>
+
+                </div>
+
+            </div>
+            <div class="acrticle-boder-lauter-top">
+                <div class="content-img">
+                    <img src="img/Gabriel García Márquez.png" alt="">
+                </div>
+                <div class="content-top">
+                    <h4 class="item-name">Gabriel García Márquez</h4>
+                    <a href="" class="item-name-top">The Nobel Prize in Literature 1982</a>
+                    <p class="content-top-laureates">"for his novels and short stories, in which the fantastic and the
+                        realistic are combined in a richly composed world of imagination, reflecting a continent’s life
+                        and conflicts."
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="article-grid-featured-content">
+        <div class="featured-wrapper-content">
+            <div class="article-one-third">
+                <div class="content-wrapper-top">
+                    <header class="content-wrapper-head">
+                        <p>Watch an interview with Doris Lessing</p>
+                    </header>
+                    <div class="text">
+                        <p>Doris Lessing talks about her early days as a writer – working on her first book ‘The Grass
+                            is Singing’ – and more</p>
+                    </div>
+
+                </div>
+                <div class="featureimage">
+                    <div class="image">
+                        <img src="img/Doris.jpg" alt="">
+                    </div>
+                    <div class="figcaption">
+                        <p class="figcaption-caption">Doris LessingDoris Lessing at her home in London, 14 April 2008.
+                        </p>
+                        <p class="figcaption-attribution">© Nobel Media.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="article-one-third">
+                <div class="content-wrapper-top">
+                    <header class="content-wrapper-head">
+                        <p>Read an excerpt from Toni Morrison’s ‘Sula’</p>
+                    </header>
+                    <div class="text">
+                        <p>‘Sula’ is the hugely influential second novel from one of the most powerful literary forces
+                            of our time.</p>
+                    </div>
+
+                </div>
+                <div class="featureimage">
+                    <div class="image">
+                        <img src="img/Toni Morrison.jpg" alt="">
+                    </div>
+                    <div class="figcaption">
+                        <p class="figcaption-caption">Toni Morrison speakingToni Morrison speaking at 'A Tribute to
+                            Chinua Achebe – 50 Years Anniversary of ‘Things Fall Apart.</p>
+                        <p class="figcaption-attribution"> Photo: Angela Radulescu</p>
+                    </div>
+                </div>
+            </div>
+            <div class="article-one-third">
+                <div class="content-wrapper-top">
+                    <header class="content-wrapper-head">
+                        <p>“The poetics of tragedy are important for me”</p>
+                    </header>
+                    <div class="text">
+                        <p>Listen to this interview with Svetlana Alexievich following the announcement of the 2015
+                            prize.</p>
+                    </div>
+
+                </div>
+                <div class="featureimage">
+                    <div class="image">
+                        <img src="img/Svetlana Alexievich.jpg" alt="">
+                    </div>
+                    <div class="figcaption">
+                        <p class="figcaption-caption">© Nobel Media.</p>
+                        <p class="figcaption-attribution">Photo: Alexander Mahmoud</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="newsletter-signup">
+        <div class="newsletter-signup-register">
+            <div class="newsletter-signup-register-form">
+                <div class="newsletter-signup-text">
+                    <h3 class="newsletter-signup-top">Sign up to the "Monthly" newsletter</h3>
+                    <p>Join thousands of global subscribers enjoying the free monthly Nobel Prize highlights, trivia and
+                        up-to-date information.</p>
+                </div>
+                <div class="newsletter-signup-form">
+                    <form action="">
+                        <input type="text" name="email" id="email" placeholder="Your email Adress"
+                            style="width: 70%;height: 5vh;border-radius: 0.1cm;font-size: 1.3rem;">
+                        <input type="button" value="subscribers" name="button" id="button"
+                            style="width: 20%;height: 5vh;border-radius: 0.1cm;background-color:rgb(74, 207, 237); font-size: 1.3rem ; color: #fff;"><br>
+                        <input type="checkbox" name="checkbox" id="checkbox" value=""><span>I consent to my email
+                            address
+                            being used
+                            in accordance with the privacy policy.</span>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

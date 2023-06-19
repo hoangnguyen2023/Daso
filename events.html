@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evens Pages</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+<!--   width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+    font:'Hanken Grotesk', sans-serif -->
+<style>
+    * {
+        margin: 0rem 0rem;
+        padding: 0px 0px;
+    }
+
+    body {
+
+        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+
+    #main-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    #nav-main {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 50px;
+        background-color: #fff;
+    }
+
+    #nav-main li {
+        position: relative;
+        list-style: none;
+        padding: 0px 20px;
+    }
+
+    #nav-main>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 550;
+        color: #ac9e56;
+        display: block;
+    }
+
+    #main-menu>#nav-main>li>a {
+        position: relative;
+    }
+
+    #main-menu>#nav-main>li>a::before {
+        content: "";
+        height: 0.2vh;
+        width: 100%;
+        background-color: #ac8314;
+        position: absolute;
+        bottom: 0px;
+        display: none;
+
+    }
+
+    #main-menu>#nav-main>li:hover>a::before {
+        display: block;
+
+    }
+
+    #nav-main ul.sub-menu {
+        position: absolute;
+        padding: 15px 0;
+        width: 170px;
+        display: none;
+        background-color: #fff;
+    }
+
+    #nav-main li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #nav-main ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    #nav-main ul.sub-menu li {
+        padding: 10px 0px;
+    }
+
+    #nav-main ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #nav-main ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+    .nav {
+        /* background: rgb(212, 208, 208); */
+        margin: 3rem;
+        /* height: 6vh; */
+    }
+
+    .nav ul {
+
+        text-align: center;
+
+    }
+
+    .nav ul li {
+        list-style: none;
+        display: inline-flex;
+
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        padding: 10px;
+        color: #ac9e56;
+        font-size: 20px;
+    }
+
+    .nav1 ul {
+        list-style: none;
+        padding-bottom: 1cm;
+
+    }
+
+    .nav1 ul li a {
+        color: #3498db;
+        font-size: 2rem;
+        text-decoration: none;
+    }
+
+    .nav1 ul li:hover a {
+        color: #2c3e50;
+    }
+
+    .banner {
+        width: 100%;
+        text-align: center;
+        /* height: 70vh; */
+    }
+
+    .banner img {
+        width: 100%;
+        height: 70vh;
+    }
+
+    p.title-banner {
+        font-size: 1.1rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        color: #737679;
+
+    }
+
+    .article-content {
+        width: 100%;
+        height: auto;
+        background-color: #f6f6f6;
+    }
+
+    .blur {
+        text-align: center;
+        padding: 8vh 0vh;
+    }
+
+    .blur a {
+        text-decoration: none;
+        font-size: 4rem;
+        text-transform: capitalize;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+
+    }
+
+    .article-content-header {
+        width: 77vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: aquamarine; */
+
+    }
+
+    .article-content-header-top {
+        display: flex;
+        justify-content: space-between;
+        /* text-align: justify; */
+
+    }
+
+    .article-content-header-top-h4 {
+        width: 70%;
+        height: auto;
+        border-top: #c6c9cc solid thin;
+        /* background-color: #3498db; */
+        padding: 5vh 0vh;
+    }
+
+    .quick-fact {
+        width: 25%;
+        height: 70vh;
+        border-top: #c6c9cc solid thin;
+        /* background-color: red; */
+        padding: 5vh 0vh;
+    }
+
+    h4.title {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        padding: 3vh 0vh;
+        color: #ac9e56;
+        text-transform: capitalize;
+
+    }
+
+    .text p {
+        padding: 3vh 0vh;
+        font-size: 1.1rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+    }
+
+    .quick-fact h4 {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        padding: 3vh 0vh;
+        color: #ac9e56;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+    .quick-fact p {
+        /* text-align: justify; */
+        padding: 3vh 0vh;
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+
+    }
+
+    .section-article-feature {
+        width: 100%;
+        height: auto;
+        background-color: #f6f6f6;
+
+    }
+
+    .section-article-feature-header {
+        width: 77vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: aqua; */
+        border-top: #c6c9cc solid thin;
+    }
+
+    header.header-top {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        padding: 3vh 0vh;
+        color: #ac8314;
+
+    }
+
+    .section-article-feature-content {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .section-article-featrue-content-main {
+        width: 48%;
+        height: auto;
+        /* background-color: red; */
+        border-top: #c6c9cc solid thin;
+        border-bottom: #c6c9cc solid thin;
+
+    }
+
+    .section-article-feature-content-main-right {
+        width: 48%;
+        height: auto;
+        /* background-color: blue; */
+        border-top: #c6c9cc solid thin;
+        border-bottom: #c6c9cc solid thin;
+    }
+
+    .baner-content img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .section-article-feature-content-main-right img {
+        width: 100%;
+        height: 50%;
+
+    }
+
+    .section-article-featrue-content-main a {
+        font-size: 2.5rem;
+        color: #3498db;
+    }
+
+    .section-article-featrue-content-main p,
+    a {
+
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        padding: 5vh 0vh;
+        /* color: #e2ad23; */
+    }
+
+    .section-article-feature-content-main-right a {
+        font-size: 2.5rem;
+        color: #3498db;
+
+    }
+
+    .section-article-feature-content-main-right p,
+    a {
+
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        padding: 5vh 0vh;
+
+    }
+
+    .section-article-feature-a {
+
+        width: 100%;
+        height: auto;
+        background-color: #f6f6f6;
+
+    }
+
+    .header-top-a h3 {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        padding: 3vh 0vh;
+        color: #ac8314;
+
+    }
+
+    .section-article-feature-header-a {
+        width: 77vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: rgb(7, 192, 134); */
+
+    }
+
+    .section-article-feature-header-a {
+        border-top: #c6c9cc solid thin;
+    }
+
+    .section-article-feature-content-a {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a.title-head-top {
+        font-size: 2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        padding: 8vh 0vh;
+        color: #3498db;
+
+    }
+
+    .section-article-featrue-content-main-a {
+
+        width: 48%;
+        height: auto;
+        /* background-color: blueviolet; */
+        border-top: #c6c9cc solid thin;
+    }
+
+
+    .section-article-feature-content-main-right-a {
+        width: 48%;
+        height: auto;
+        /* background-color: crimson; */
+    }
+
+    .section-article-feature-content-main-right-a img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .section-article-featrue-content-main-a:hover a.title-head-top:hover {
+        color: #ac8314;
+
+    }
+
+    .section-article-feature-content-a p {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: normal;
+        padding: 5vh 0vh;
+
+    }
+
+
+
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .social-list a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+                </a>
+            </header>
+            <div id="main-menu">
+                <ul id="nav-main">
+                    <li><a href="">Winners</a>
+                        <ul class="sub-menu">
+                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="medicine.html">Medicine Prize</a></li>
+                            <li><a href="literature.html">Literature Prize</a></li>
+                            <li><a href="peace.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="team-member.html">About Us</a>
+                        <!-- <ul class="sub-menu">
+                            <li><a href="">Alfred Nobel’s life</a></li>
+                            <li><a href="">Alfred Nobel’s will</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="nominations.html">Nomination</a>
+                        <ul class="sub-menu">
+                            <li><a href="nomination_physics.html">Physics Prize</a></li>
+                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
+                            <li><a href="nomination_literature.html">Literature Prize</a></li>
+                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="img/Olga Botner interviewed.jpg" alt="">
+            <p class="title-banner">Olga Botner interviewed at a press conference at the Royal Swedish Academy of
+                Sciences. © Nobel Prize Outreach. Photo: A. Mahmoud</p>
+        </div>
+    </div>
+    <div class="blur">
+        <a href="" class="hero-link">
+            <h4>press Room</h4>
+        </a>
+    </div>
+    <div class="article-content">
+        <div class="article-content-header">
+            <div class="article-content-header-top">
+                <div class="article-content-header-top-h4">
+                    <h4 class="title">Press room for the Nobel Foundation and the outreach activities of the Nobel Prize
+                    </h4>
+                    <div class="text">
+                        <p class="text-one">The Nobel Foundation is a private institution established in 1900 based on
+                            the will of Alfred Nobel. The main task is to manage the assets made available through the
+                            will, and the intellectual property related to the Nobel Prize that has developed over the
+                            years.</p>
+                        <p class="text-two">On 27 November 1895, Alfred Nobel signed his last will and testament, giving
+                            the largest share of his fortune to a series of prizes in Physics, Chemistry, Physiology or
+                            Medicine, Literature and Peace – the Nobel Prizes. In 1968, Sveriges Riksbank (Sweden’s
+                            central bank) established The Sveriges Riksbank Prize in Economic Sciences in Memory of
+                            Alfred Nobel.</p>
+                        <p class="text-thir">Several outreach organisations and activities have been developed to
+                            inspire generations and disseminate knowledge about the Nobel Prize. The entities include:
+                            Nobel Prize Outreach and the Nobel Prize Museum, all located in Stockholm, as well as the
+                            Nobel Peace Prize, the Research & Information AS and the Nobel Peace Center Foundation, all
+                            located in Oslo. You can read more about these activities here</p>
+                    </div>
+
+                </div>
+                <div class="quick-fact">
+                    <h4 class="sub-section-header">Media contacts and licensing inquiries</h4>
+                    <p class="quick-fact-content-one">Inquiries regarding licensing, usage of texts, photos and videos
+                        media@nobelprize.org</p>
+                    <p class="quick-fact-content-two">Media inquiries to the Nobel Foundation and the outreach
+                        activities of the Nobel Prize
+                        press@nobelprize.org
+                        +46 8 122 084 45</p>
+                    <p class="quick-fact-thir">Media inquiries regarding the Nobel Peace Prize in Oslo
+                        media@nobel.no
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="section-article-feature">
+        <div class="section-article-feature-header">
+            <header class="header-top">
+                <h3>Material</h3>
+
+            </header>
+            <div class="section-article-feature-content">
+                <div class="section-article-featrue-content-main">
+                    <a href="">Press releases</a>
+                    <p class="title-content">Here you can find the latest press releases.</p>
+                    <div class="baner-content">
+                        <img src="img/Rasmus Lundgren.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>© Nobel Media. Photo: Rasmus Lundgren</span>
+                    </div>
+
+                </div>
+                <div class="section-article-feature-content-main-right">
+                    <a href="">Pressmeddelanden</a>
+                    <p class="title-content">Här finns pressmeddelanden på svenska och norska.</p>
+                    <div class="baner-content">
+                        <img src="img/A. Mahmoud.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>© Nobel Media AB. Photo: A. Mahmoud</span>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="section-article-feature-content">
+                <div class="section-article-featrue-content-main">
+                    <a href="">Images</a>
+                    <p class="title-content">Here you can find images of Nobel Prize laureates and public events.</p>
+                    <div class="baner-content">
+                        <img src="img/Donna Strickland.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>Donna Strickland receives her Nobel Prize from the King of Sweden. © Nobel Media. Photo:
+                            Alexander Mahmoud</span>
+                    </div>
+
+                </div>
+                <div class="section-article-feature-content-main-right">
+                    <a href="">Documents</a>
+                    <p class="title-content">Here you can find published documents.Here you can find images of Nobel
+                        Prize laureates and public events</p>
+                    <div class="baner-content">
+                        <img src="img/Pi Frisk.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>© Nobel Prize Outreach, photo: Pi Frisk</span>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="section-article-feature-content">
+                <div class="section-article-featrue-content-main">
+                    <a href="">Coming up</a>
+                    <p class="title-content">The Nobel Prize Summit “Truth, Trust and Hope” will bring together Nobel
+                        Prize laureates and other world-renowned experts and leaders for a global dialogue on how to
+                        stop misinformation from eroding public trust in science, scientists, and the institutions they
+                        serve.</p>
+                    <div class="baner-content">
+                        <img src="img/Maria Ressa.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>Maria Ressa. © Nobel Prize Outreach. Photo: Geir Anders Rybakken orslien</span>
+                    </div>
+
+                </div>
+                <div class="section-article-feature-content-main-right">
+                    <a href="">Podcast series</a>
+                    <p class="title-content">As an economist, I’m looking at that number and trying to think about how
+                        it fits into a broader economic picture. But on the other hand, having grown up in a small town,
+                        not a very rich town, economically very stressed place I could think about the real families,
+                        real .</p>
+                    <div class="baner-content">
+                        <img src="img/A. Mahmoud.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>© Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2022</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="section-article-feature-a">
+        <div class="section-article-feature-header-a">
+            <header class="header-top-a">
+                <h3>News</h3>
+
+            </header>
+            <div class="section-article-feature-content-a">
+                <div class="section-article-featrue-content-main-a">
+                    <a href="" class="title-head-top">2023 Nobel Prize announcements</a>
+                    <p class="title-content-a">This year’s Nobel Prize announcements will take place 2–9 October.</p>
+                    <div class="figcapton-a">
+                        <a href="">See the full schedule</a>
+                    </div>
+
+                </div>
+                <div class="section-article-feature-content-main-right-a">
+                    <div class="baner-content-a">
+                        <img src="img/announcement-dates-2023.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>© Nobel Media AB. Photo: A. Mahmoud</span>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="section-article-feature-a">
+        <div class="section-article-feature-header-a">
+            <header class="header-top-a">
+                <h3>New exhibition at the Nobel Prize Museum</h3>
+            </header>
+            <div class="section-article-feature-content-a">
+                <div class="section-article-feature-content-main-right-a">
+                    <div class="baner-content-a">
+                        <img src="img/Nanaka Adachi.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>© Nobel Prize Outreach. Photo: Nanaka Adachi.</span>
+                    </div>
+                </div>
+                <div class="section-article-featrue-content-main-a">
+                    <a href="" class="title-head-top">Exhibition time: 14 February 2023 – 29 August 2023</a>
+                    <p class="title-content-a">Meet Nobel Prize laureates on their way to new breakthroughs, stories and
+                        insights in new exhibition</p>
+                    <div class="figcapton-a">
+                        <a href="">In the exhibition From ideas to Nobel Prizes, you will learn about the discoveries
+                            and ideas of some Nobel Prize laureates, through their working environments. </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="section-article-feature-a">
+        <div class="section-article-feature-header-a">
+            <header class="header-top-a">
+                <h3>Coming up</h3>
+
+            </header>
+            <div class="section-article-feature-content-a">
+                <div class="section-article-featrue-content-main-a">
+                    <a href="" class="title-head-top-b">24-26 May 2023</a>
+                    <p class="title-content-a">Nobel Prize Summit.</p>
+                    <p class="title-content-b">The Nobel Prize Summit “Truth, Trust and Hope” will bring together Nobel
+                        Prize laureates
+                        and other world-renowned experts and leaders for a global dialogue on how to stop misinformation
+                        from eroding public trust in science, scientists, and the institutions they serve.</p>
+                    <div class="figcapton-a">
+                        <a href="">Speakers will include Nobel Prize laureates such as journalist and author Maria Ressa
+                            and astrophysicist Saul Perlmutter</a>
+                    </div>
+
+                </div>
+                <div class="section-article-feature-content-main-right-a">
+                    <div class="baner-content-a">
+                        <img src="img/announcement-dates-2023.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>Maria Ressa. © Nobel Prize Outreach. Photo: Geir Anders Rybakken Ørslien</span>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="section-article-feature-a">
+        <div class="section-article-feature-header-a">
+            <header class="header-top-a">
+                <h3>Nobel Center</h3>
+            </header>
+            <div class="section-article-feature-content-a">
+                <div class="section-article-feature-content-main-right-a">
+                    <div class="baner-content-a">
+                        <img src="img/inside the Nobel Center.jpg" alt="">
+                    </div>
+                    <div class="figcapton">
+                        <span>
+                            Illustration of the view from inside the Nobel Center. Illustration: TMRW.inc</span>
+                    </div>
+                </div>
+                <div class="section-article-featrue-content-main-a">
+                    <a href="" class="title-head-top">New Nobel Center will be a house for science, culture and
+                        dialogue</a>
+                    <p class="title-content-a">This year’s Nobel Prize announcements will take place 2–9 October.</p>
+                    <div class="figcapton-a">
+                        <a href="">The new Nobel Center at Slussen in Stockholm will offer a broad range of public
+                            activities including exhibitions, school programmes, lectures and conversations about the
+                            major issues of the future. The public activities that are already being conducted around
+                            the world, digitally and at the Nobel Prize Museum in Stockholm’s Old Town, will be further
+                            developed and scaled up for the opening of the Nobel Center.</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

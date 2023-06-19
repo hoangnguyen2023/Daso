@@ -1,0 +1,277 @@
+body {
+    font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+}
+
+.logo {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.logo img {
+    width: 12%;
+    height: auto;
+}
+
+#main-menu {
+    width: 100%;
+    height: 50px;
+}
+
+#nav-main {
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 50px;
+    background-color: #fff;
+}
+
+#nav-main li {
+    position: relative;
+    list-style: none;
+    padding: 0 30px;
+}
+
+/* #nav-main>li {
+    padding: 0 30px;
+    list-style: none;
+} */
+
+#nav-main>li>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 550;
+    color: #ac8314;
+    display: block;
+}
+
+#nav-main ul.sub-menu {
+    position: absolute;
+    padding: 15px 0;
+    width: 170px;
+    display: none;
+    background-color: #fff;
+}
+
+#nav-main li:hover>ul.sub-menu {
+    display: block;
+}
+
+#nav-main ul.sub-menu li a {
+    text-decoration: none;
+    font-size: 16px;
+    padding-left: 12px;
+}
+
+#nav-main ul.sub-menu li {
+    padding: 10px 0px;
+}
+
+#nav-main ul.sub-menu li a {
+    color: #ac8314;
+}
+
+#nav-main ul.sub-menu li:hover a {
+    color: #e2ad23;
+    background-color: white;
+}
+.prize{
+    width: 100vw;
+    height: auto;
+    margin: 0;
+}
+.banner{
+    background-image: url(img/WhiteWater-Sustainability-768x432.jpg);
+    width: 100%;
+    height: 250px;
+}
+.banner-topic{
+    text-align: center;
+    padding: 100px;
+    color: whitesmoke;
+}
+.prize_content{
+    width: 74%;
+    height: 100%;
+    margin-left: 13%;
+    margin-right: 13%;
+}
+.content1{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.left_topic{
+    border-top: solid 1px lightgray;
+    display: block;
+    flex-basis: 69%;    
+}
+.right_topic{
+    border-top: solid 1px lightgray;
+    display: block;
+    flex-basis: 29%;
+}
+.content{
+    width: 100%;
+    height: fit-content;
+    border-top: solid 1px lightgray;
+}
+.content_header{
+    width: 100%;
+    height: auto;
+    color: #ac8314;
+}
+.content_topic{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text_topic{
+    border-top: solid 1px lightgray;
+    display: block;
+    flex-basis: 49%;
+}
+.text_topic a{
+    text-decoration: none;
+    color: darkblue;
+}
+.text_topic a:hover{
+    color: #e2ad23;
+}
+.img_topic{
+    display: block;
+    flex-basis: 49%;
+}
+.img_topic img{
+    width: 100%;
+    height: 90%;
+}
+.background{
+    background-color: antiquewhite;
+    margin-top: 30px;
+}
+.featured_laureate{
+    width: 100%;
+    height: fit-content;
+    border-top: solid 1px lightgray;
+    margin-top: 30px;
+}
+.lareate{
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.character{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.tacgia{
+    flex-basis: 49%;
+    height: fit-content;
+    display: block;
+    justify-content: space-between;
+    border-top: solid 1px lightgray;
+}
+.row{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.character_img{
+    width: 49%;
+    display: block;
+}
+.character_img img{
+    width: 90%;
+    height: 350px;
+}
+.character_prize{
+    width: 49%;
+    display: block;
+}
+.discover{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.topic_discover{
+    flex-basis: 32%;
+    display: block;
+    height: fit-content;
+
+    border-top: solid 1px lightgray;
+}
+.topic_discover img{
+    width: 100%;
+    height: 350px;
+}
+.sign-up{
+    background-color: lightgray;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+}
+.sign-up-box{
+    width: 74%;
+    height: auto;
+    margin-right: 13%;
+    margin-left: 13%;
+    padding: 50px;
+}
+.text{
+    float: left;
+    width: 49%;
+    height: 200px;
+}
+.email{
+    float: right;
+    width: 49%;
+    height: 200px;
+}
+.input-email{
+    height: 30px;
+    width: 400px;
+ }
+ .email button{
+    height: 30px;
+    background-color: cornflowerblue;
+    color: #fff;
+ }
+ #footer {
+    padding: 6.4vh 1.6vw;
+    text-align: center;
+    background-color: #ac8314;
+    margin-top: 20px;
+}
+
+#footer .social-list {
+    font-size: 2.4vw;
+}
+
+#footer .social-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .social-list a:hover,
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright {
+    margin-top: 1.5vh;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.6vw;
+}
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}

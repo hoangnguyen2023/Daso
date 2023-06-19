@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine-news page</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+<!-- font:
+color: #ac9e56; 
+color fig:#7f8c8d-->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        /* box-sizing: border-box; */
+    }
+
+    body {
+        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    }
+
+    .logo {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo img {
+        width: 12%;
+        height: auto;
+    }
+
+    #main-menu {
+        width: 100%;
+        height: auto;
+    }
+
+    #nav-main {
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 50px;
+        background-color: #fff;
+    }
+
+    #nav-main li {
+        position: relative;
+        list-style: none;
+        padding: 0 30px;
+    }
+
+    #nav-main>li>a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 550;
+        color: #ac9e56;
+        display: block;
+    }
+
+    #main-menu>#nav-main>li>a {
+        position: relative;
+    }
+
+    #main-menu>#nav-main>li>a::before {
+        content: "";
+        height: 0.2vh;
+        width: 100%;
+        background-color: #ac8314;
+        position: absolute;
+        bottom: 0px;
+        display: none;
+
+    }
+
+    #main-menu>#nav-main>li:hover>a::before {
+        display: block;
+
+    }
+
+    #nav-main ul.sub-menu {
+        position: absolute;
+        padding: 15px 0;
+        width: 170px;
+        display: none;
+        background-color: #fff;
+    }
+
+    #nav-main li:hover>ul.sub-menu {
+        display: block;
+    }
+
+    #nav-main ul.sub-menu li a {
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    #nav-main ul.sub-menu li {
+        padding: 10px 0px;
+    }
+
+    #nav-main ul.sub-menu li a {
+        color: #ac8314;
+    }
+
+    #nav-main ul.sub-menu li:hover a {
+        color: #e2ad23;
+        background-color: white;
+    }
+
+    .section-baner-header {
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .section-baner-header img {
+        width: 100%;
+        height: 90vh;
+        padding-top: 5vh;
+    }
+
+    .section-baner-header p {
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        color: #7f8c8d;
+        text-align: center;
+
+    }
+
+    .section-container {
+        width: 100%;
+        padding: 5vh 0vh;
+        /* background-color: aqua; */
+
+    }
+
+    .container-section-content {
+        width: 78vw;
+        height: auto;
+        margin-left: 11vw;
+        margin-right: 11vw;
+        /* background-color: blueviolet; */
+
+    }
+
+    .container-section-content p {
+        padding: 3vh 0vh;
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        /* color: #7f8c8d; */
+        text-align: center;
+
+    }
+
+    .container-section-content span {
+        color: #ac8314;
+        font-weight: bold;
+    }
+
+    .title {
+        padding: 8vh 0vh;
+
+    }
+
+    .title h5 {
+        font-size: 2.8rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: center;
+        color: #ac9e56;
+    }
+
+    .page-content-border-top h5 {
+        font-size: 2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        /* text-align: center; */
+        color: #ac9e56;
+    }
+
+    .entry-page-content p {
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+
+    }
+
+    .entry-page-content img {
+        width: 100%;
+        height: 70vh;
+        padding-top: 5vh;
+    }
+
+    .main-content-border .clip-video {
+        text-align: center;
+    }
+
+    .main-content-border h3 {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        padding: 3vh 0vh;
+        color: #ac9e56;
+
+    }
+
+    .main-content-border p {
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        padding: 1vh 0vh;
+
+    }
+
+    .main-content-border a {
+        text-decoration: none;
+        color: #ac9e56;
+    }
+
+    .article-grid-feature-content {
+        padding: 3vh 0vh;
+        /* background-color: blue; */
+        border-top: #7f8c8d solid thin;
+        border-bottom: #7f8c8d solid thin;
+
+    }
+
+    .article-grid-feature-content h3 {
+        font-size: 2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        /* align-items: center; */
+        padding: 2vh 0vh;
+        color: #ac9e56;
+
+    }
+
+    .article-half-content {
+        display: flex;
+        justify-content: space-between;
+        /* background-color: chartreuse; */
+        padding: 3vh 0vh;
+    }
+
+    .article-half-content-one {
+        width: 48%;
+        border-top: #7f8c8d solid thin;
+    }
+
+    .article-half-content-one p {
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        /* align-items: center; */
+        padding: 2vh 0vh;
+
+    }
+
+    .image-content {
+        width: 48%;
+
+    }
+
+    .image-content img {
+        width: 100%;
+
+    }
+
+    .page-content-prize-introduction-border a {
+        text-decoration: none;
+
+    }
+
+    .page-content-prize-introduction-border h3 {
+        font-size: 1.5rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        padding: 2vh 0vh;
+        /* color: #ac9e56; */
+    }
+
+    .page-content-prize-introduction-border p {
+        font-size: 1.2rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        color: #5f6263;
+    }
+
+    .list-laureates-border-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2vh 0vh;
+    }
+
+    .list-laureate {
+        width: 32%;
+    }
+
+    .list-laureate img {
+        width: 100%;
+        height: 55vh;
+    }
+
+    .border-top-pages p {
+        font-size: 1.1rem;
+        font-family: 'Hanken Grotesk', sans-serif;
+        text-align: justify;
+        /* color: #7f8c8d; */
+
+    }
+
+    .border-top-pages {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* padding: 2vh 0vh; */
+        background-color: #fcfbf9;
+
+    }
+
+    .header-page {
+        /* display: block; */
+        border-top: #bdc2c3 solid thin;
+        width: 32%;
+        /* background-color: aqua; */
+
+    }
+
+    .main-page {
+        /* display: block; */
+        border-top: #bdc2c3 solid thin;
+        width: 32%;
+        /* background-color: red; */
+
+
+    }
+
+    .main-pages {
+        /* display: block; */
+        border-top: #bdc2c3 solid thin;
+        width: 32%;
+        /* background-color: coral; */
+
+    }
+
+
+
+
+    #footer {
+        padding: 6.4vh 1.6vw;
+        text-align: center;
+        background-color: #ac8314;
+    }
+
+    #footer .social-list {
+        font-size: 2.4vw;
+    }
+
+    #footer .social-list a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+
+    #footer .social-list a:hover,
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #footer .copyright {
+        margin-top: 1.5vh;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+    }
+
+    #footer .copyright a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <header class="logo">
+                <a href="index.html">
+                    <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
+                </a>
+            </header>
+            <div id="main-menu">
+                <ul id="nav-main">
+                    <li><a href="">Winners</a>
+                        <ul class="sub-menu">
+                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="medicine.html">Medicine Prize</a></li>
+                            <li><a href="literature.html">Literature Prize</a></li>
+                            <li><a href="peace.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="team-member.html">About Us</a>
+                        <!-- <ul class="sub-menu">
+                            <li><a href="">Alfred Nobel’s life</a></li>
+                            <li><a href="">Alfred Nobel’s will</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="nominations.html">Nomination</a>
+                        <ul class="sub-menu">
+                            <li><a href="nomination_physics.html">Physics Prize</a></li>
+                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
+                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
+                            <li><a href="nomination_literature.html">Literature Prize</a></li>
+                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="News.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section-baner-header">
+        <img src="img/Genetic.png" alt="">
+        <p>Ill. Niklas Elmehed © Nobel Prize Outreach</p>
+    </div>
+    <div class="section-container">
+        <div class="container-section-content">
+            <div class="title">
+                <h5>for his discoveries concerning the genomes of extinct hominins and human evolution</h5>
+            </div>
+            <div class="page-content-border-top">
+                <div class="entry-page-content">
+                    <h5>Process of nomination and selection</h5>
+                    <p>Humanity has always been intrigued by its origins. Where do we come from, and how are we related
+                        to those who came before us? What makes us, Homo sapiens, different from other hominins?</p>
+                    <p>Through his pioneering research, Svante Pääbo accomplished something seemingly impossible:
+                        sequencing the genome of the Neanderthal, an extinct relative of present-day humans. He also
+                        made the sensational discovery of a previously unknown hominin, Denisova. Importantly, Pääbo
+                        also found that gene transfer had occurred from these now extinct hominins to Homo sapiens
+                        following the migration out of Africa around 70,000 years ago. This ancient flow of genes to
+                        present-day humans has physiological relevance today, for example affecting how our immune
+                        system reacts to infections.</p>
+                    <p>Pääbo’s seminal research gave rise to an entirely new scientific discipline; paleogenomics. By
+                        revealing genetic differences that distinguish all living humans from extinct hominins, his
+                        discoveries provide the basis for exploring what makes us uniquely human.</p>
+                </div>
+                <div class="entry-page-content">
+                    <h5>Where do we come from?</h5>
+                    <p>The question of our origin and what makes us unique has engaged humanity since ancient times.
+                        Paleontology and archeology are important for studies of human evolution. Research provided
+                        evidence that the anatomically modern human, Homo sapiens, first appeared in Africa
+                        approximately 300,000 years ago, while our closest known relatives, Neanderthals, developed
+                        outside Africa and populated Europe and Western Asia from around 400,000 years until 30,000
+                        years ago, at which point they went extinct. About 70,000 years ago, groups of Homo sapiens
+                        migrated from Africa to the Middle East and, from there they spread to the rest of the world.
+                        Homo sapiens and Neanderthals thus coexisted in large parts of Eurasia for tens of thousands of
+                        years. But what do we know about our relationship with the extinct Neanderthals? Clues might be
+                        derived from genomic information. By the end of the 1990’s, almost the entire human genome had
+                        been sequenced. This was a considerable accomplishment, which allowed subsequent studies of the
+                        genetic relationship between different human populations. However, studies of the relationship
+                        between present-day humans and the extinct Neanderthals would require the sequencing of genomic
+                        DNA recovered from archaic specimens.</p>
+                </div>
+                <div class="entry-page-content">
+                    <h5>A seemingly impossible task</h5>
+                    <p>TEarly in his career, Svante Pääbo became fascinated by the possibility of utilizing modern
+                        genetic methods to study the DNA of Neanderthals. However, he soon realized the extreme
+                        technical challenges, because with time DNA becomes chemically modified and degrades into short
+                        fragments. After thousands of years, only trace amounts of DNA are left, and what remains is
+                        massively contaminated with DNA from bacteria and contemporary humans (Figure 1). As a
+                        postdoctoral student with Allan Wilson, a pioneer in the field of evolutionary biology, Pääbo
+                        started to develop methods to study DNA from Neanderthals, an endeavor that lasted several
+                        decades.</p>
+                    <h5>Who is eligible for the Nobel Prize in Literature?</h5>
+                    <p>The candidates eligible for the literature prize are those nominated by qualified persons (see
+                        below) who have received an invitation from the Nobel Committee to submit names for
+                        consideration. Other persons who are qualified to nominate but have not received invitations may
+                        also submit nominations. No one can nominate himself or herself.</p>
+                    <h5>How are the Nobel Prize laureates in literature selected?</h5>
+                    <div class="entry-page-img">
+                        <img src="img/medicine2022-figure1.png" alt="">
+                        <!-- <span style="color: #7f8c8d;">The nomination process for Nobel Prize
+                            laureates in literature</span> -->
+                    </div>
+                    <p>Figure 1. DNA is localized in two different compartments in the cell. Nuclear DNA harbors most of
+                        the genetic information, while the much smaller mitochondrial genome is present in thousands of
+                        copies. After death, DNA is degraded over time and ultimately only small amounts remain. It also
+                        becomes contaminated with DNA from e.g. bacteria and contemporary humans.</p>
+
+                    <p> In 1990, Pääbo was recruited to University of Munich, where, as a newly appointed Professor, he
+                        continued his work on archaic DNA. He decided to analyze DNA from Neanderthal mitochondria –
+                        organelles in cells that contain their own DNA. The mitochondrial genome is small and contains
+                        only a fraction of the genetic information in the cell, but it is present in thousands of
+                        copies, increasing the chance of success. With his refined methods, Pääbo managed to sequence a
+                        region of mitochondrial DNA from a 40,000-year-old piece of bone. Thus, for the first time, we
+                        had access to a sequence from an extinct relative. Comparisons with contemporary humans and
+                        chimpanzees demonstrated that Neanderthals were genetically distinct.</p>
+                    <h5>Sequencing the Neanderthal genome</h5>
+                    <p>As analyses of the small mitochondrial genome gave only limited information, Pääbo now took on
+                        the enormous challenge of sequencing the Neanderthal nuclear genome. At this time, he was
+                        offered the chance to establish a Max Planck Institute in Leipzig, Germany. At the new
+                        Institute, Pääbo and his team steadily improved the methods to isolate and analyze DNA from
+                        archaic bone remains. The research team exploited new technical developments, which made
+                        sequencing of DNA highly efficient. Pääbo also engaged several critical collaborators with
+                        expertise on population genetics and advanced sequence analyses. His efforts were successful.
+                        Pääbo accomplished the seemingly impossible and could publish the first Neanderthal genome
+                        sequence in 2010. Comparative analyses demonstrated that the most recent common ancestor of
+                        Neanderthals and Homo sapiens lived around 800,000 years ago.</p>
+                    <div class="entry-page-img">
+                        <img src="img/medicine2022-2-figure2.png" alt="">
+                    </div>
+
+                    <p>Figure 2. A. Pääbo extracted DNA from bone specimens from extinct hominins. He first obtained
+                        a bone fragment from Neandertal in Germany, the site that gave name to the Neanderthals.
+                        Later, he used a finger bone from the Denisova Cave in southern Siberia, the site that gave
+                        name to Denisovans. B. Phylogenetic tree showing the evolution and relationship between Homo
+                        sapiens and the extinct hominins. The phylogenetic tree also illustrates the gene flows
+                        discovered by Pääbo.</p>
+                    <p>Pääbo and his co-workers could now investigate the relationship between Neanderthals and
+                        modern-day humans from different parts of the world. Comparative analyses showed that DNA
+                        sequences from Neanderthals were more similar to sequences from contemporary humans
+                        originating from Europe or Asia than to contemporary humans originating from Africa. This
+                        means that Neanderthals and Homo sapiens interbred during their millennia of coexistence. In
+                        modern day humans with European or Asian descent, approximately 1-4% of the genome
+                        originates from the Neanderthals (Figure 2).</p>
+                    <h5>A sensational discovery: Denisova</h5>
+                    <p>In 2008, a 40,000-year-old fragment from a finger bone was discovered in the Denisova cave in
+                        the southern part of Siberia. The bone contained exceptionally well-preserved DNA, which
+                        Pääbo’s team sequenced. The results caused a sensation: the DNA sequence was unique when
+                        compared to all known sequences from Neanderthals and present-day humans. Pääbo had
+                        discovered a previously unknown hominin, which was given the name Denisova. Comparisons with
+                        sequences from contemporary humans from different parts of the world showed that gene flow
+                        had also occurred between Denisova and Homo sapiens. This relationship was first seen in
+                        populations in Melanesia and other parts of South East Asia, where individuals carry up to
+                        6% Denisova DNA.</p>
+                    <p>Pääbo’s discoveries have generated new understanding of our evolutionary history. At the time
+                        when Homo sapiens migrated out of Africa, at least two extinct hominin populations inhabited
+                        Eurasia. Neanderthals lived in western Eurasia, whereas Denisovans populated the eastern
+                        parts of the continent. During the expansion of Homo sapiens outside Africa and their
+                        migration east, they not only encountered and interbred with Neanderthals, but also with
+                        Denisovans (Figure 3).</p>
+                    <h5>Paleogenomics and its relevance</h5>
+                    <p>Through his groundbreaking research, Svante Pääbo established an entirely new scientific
+                        discipline, paleogenomics. Following the initial discoveries, his group has completed
+                        analyses of several additional genome sequences from extinct hominins. Pääbo’s discoveries
+                        have established a unique resource, which is utilized extensively by the scientific
+                        community to better understand human evolution and migration. New powerful methods for
+                        sequence analysis indicate that archaic hominins may also have mixed with Homo sapiens in
+                        Africa. However, no genomes from extinct hominins in Africa have yet been sequenced due to
+                        accelerated degradation of archaic DNA in tropical climates.</p>
+                    <p>
+                        Thanks to Svante Pääbo's discoveries, we now understand that archaic gene sequences from our
+                        extinct relatives influence the physiology of present-day humans. One such example is the
+                        Denisovan version of the gene EPAS1, which confers an advantage for survival at high
+                        altitude and is common among present-day Tibetans. Other examples are Neanderthal genes that
+                        affect our immune response to different types of infections.
+                    </p>
+                    <div class="entry-page-img">
+                        <img src="img/medicine-3-2022-figure3.png" alt="">
+                    </div>
+                    <p>
+                        Figure 3. Pääbo’s discoveries have provided important information on how the world was populated
+                        at the time when Homo sapiens migrated out of Africa and spread to the rest of the world.
+                        Neanderthals lived in the west and Denisovans in the east on the Eurasian continent.
+                        Interbreeding occurred when Homo sapiens spread across the continent, leaving traces that remain
+                        in our DNA.
+                    </p>
+                    <h5>
+                        What makes us uniquely human?
+                    </h5>
+                    <p>
+                        Homo sapiens is characterized by its unique capacity to create complex cultures, advanced
+                        innovations and figurative art, as well as by the ability to cross open water and spread to all
+                        parts of our planet (Figure 4). Neanderthals also lived in groups and had big brains (Figure 4).
+                        They also utilized tools, but these developed very little during hundreds of thousands of years.
+                        The genetic differences between Homo sapiens and our closest extinct relatives were unknown
+                        until they were identified through Pääbo’s seminal work. Intense ongoing research focuses on
+                        analyzing the functional implications of these differences with the ultimate goal of explaining
+                        what makes us uniquely human.
+                    </p>
+                    <div class="entry-page-img">
+                        <img src="img/medicine-4-2022-figure4.png" alt="">
+                    </div>
+                    <p>Figure 4. Pääbo’s seminal work provides a basis for explaining what makes us uniquely human.
+
+                    </p>
+                    <h5>
+                        Key publications
+                    </h5>
+                    <p>
+                        Krings M, Stone A, Schmitz RW, Krainitzki H, Stoneking M, Pääbo S. Neandertal DNA sequences and
+                        the origin of modern humans. Cell. 1997:90:19-30.
+                    </p>
+                    <p>
+                        Green RE, Krause J, Briggs AW, Maricic T, Stenzel U, Kircher M, Patterson N, Li H, Zhai W, Fritz
+                        MH, Hansen NF, Durand EY, Malaspinas AS, Jensen JD, Marques-Bonet T, Alkan C, Prüfer K, Meyer M,
+                        Burbano HA, Good JM, Schultz R, Aximu-Petri A, Butthof A, Höber B, Höffner B, Siegemund M,
+                        Weihmann A, Nusbaum C, Lander ES, Russ C, Novod N, Affourtit J, Egholm M, Verna C, Rudan P,
+                        Brajkovic D, Kucan Ž, Gušic I, Doronichev VB, Golovanova LV, Lalueza-Fox C, de la Rasilla M,
+                        Fortea J, Rosas A, Schmitz RW, Johnson PLF, Eichler EE, Falush D, Birney E, Mullikin JC, Slatkin
+                        M, Nielsen R, Kelso J, Lachmann M, Reich D, Pääbo S. A draft sequence of the Neandertal genome.
+                        Science. 2010:328:710-722
+                    </p>
+                    <p>
+                        Krause J, Fu Q, Good JM, Viola B, Shunkov MV, Derevianko AP, Pääbo S. The complete mitochondrial
+                        DNA genome of an unknown hominin from southern Siberia. Nature. 2010:464:894-897.
+                    </p>
+                    <p>
+                        Reich D, Green RE, Kircher M, Krause J, Patterson N, Durand EY, Viola B, Briggs AW, Stenzel U,
+                        Johnson PL, Maricic T, Good JM, Marques-Bonet T, Alkan C, Fu Q, Mallick S, Li H, Meyer M,
+                        Eichler EE, Stoneking M, Richards M, Talamo S, Shunkov MV, Derevianko AP, Hublin JJ, Kelso J,
+                        Slatkin M, Pääbo S. Genetic history of an archaic hominin group from Denisova Cave in Siberia.
+                        Nature. 2010:468:1053-1060.
+                    </p>
+                    <p>
+                        Meyer M, Kircher M, Gansauge MT, Li H, Racimo F, Mallick S, Schraiber JG, Jay F, Prüfer K, de
+                        Filippo C, Sudmant PH, Alkan C, Fu Q, Do R, Rohland N, Tandon A, Siebauer M, Green RE, Bryc K,
+                        Briggs AW, Stenzel U, Dabney J, Shendure J, Kitzman J, Hammer MF, Shunkov MV, Derevianko AP,
+                        Patterson N, Andrés AM, Eichler EE, Slatkin M, Reich D, Kelso J, Pääbo S. A high-coverage genome
+                        sequence from an archaic Denisovan individual. Science. 2012:338:222-226.
+                    </p>
+                    <p>
+                        Meyer M, Kircher M, Gansauge MT, Li H, Racimo F, Mallick S, Schraiber JG, Jay F, Prüfer K, de
+                        Filippo C, Sudmant PH, Alkan C, Fu Q, Do R, Rohland N, Tandon A, Siebauer M, Green RE, Bryc K,
+                        Briggs AW, Stenzel U, Dabney J, Shendure J, Kitzman J, Hammer MF, Shunkov MV, Derevianko AP,
+                        Patterson N, Andrés AM, Eichler EE, Slatkin M, Reich D, Kelso J, Pääbo S. A high-coverage genome
+                        sequence from an archaic Denisovan individual. Science. 2012:338:222-226.
+                    </p>
+                    <p>
+                        Svante Pääbo was born 1955 in Stockholm, Sweden. He defended his PhD thesis in 1986 at Uppsala
+                        University and was a postdoctoral fellow at University of Zürich, Switzerland and later at
+                        University of California, Berkeley, USA. He became Professor at the University of Munich,
+                        Germany in 1990. In 1999 he founded the Max Planck Institute for Evolutionary Anthropology in
+                        Leipzig, Germany where he is still active. He also holds a position as adjunct Professor at
+                        Okinawa Institute of Science and Technology, Japan.
+                    </p>
+
+                </div>
+
+
+            </div>
+            <div class="main-content">
+                <div class="main-content-border">
+                    <h3>1. Show the slideshow (15 min)</h3>
+                    <p>Show the slides, using the speaker’s manuscript.</p>
+                    <div class="target-slide">
+                        <p><a href="pdf/press-medicine2022.pdf">Slideshow (PDF 1,9 MB)</a></p>
+
+                    </div>
+                    <h3>2. Show the interview (5 min)</h3>
+                    <div class="clip-video">
+                        <iframe width="860" height="555" src="https://www.youtube.com/embed/R-A0YZ8ubm0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- <h3>3. Student assignment (15 min)</h3>
+                    <p>Let the students work with the assignment.</p>
+                    <div class="target-slide-one">
+                        <p><a href="">Student assignment (PDF 70
+                                Kb)</a>
+                        </p>
+                    </div>
+                    <h3>4. Conclusion (10 min)</h3>
+                    <p>Summarise the work with the assignment and capture any questions from the students.</p>
+                    <h3>Links for further information</h3> -->
+                    <div class="target-conclusion">
+                        <p><a href="">Press release for the 2022 Nobel Peace Prize</a></p>
+                    </div>
+                    <p>A Swedish version of the lesson is available at nobelprizemuseum.se</p>
+                    <p>More about the Nobel Prize and its founder in the lesson “Alfred Nobel and the Nobel Prize”
+                    </p>
+                </div>
+                <div class="article-grid-feature-content">
+                    <h3>The Nobel Prize in Physiology or Medicine 2022</h3>
+                    <div class="article-half-content">
+                        <div class="article-half-content-one">
+                            <h3 class="title-article">Nobel Prizes 2022</h3>
+                            <p>The Nobel Prize in Physiology or Medicine 2022 was awarded to Svante Pääbo "for his
+                                discoveries concerning the genomes of extinct hominins and human evolution"</p>
+                        </div>
+                        <div class="image-content">
+                            <img src="img/Nobel Prizes 2022.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="page-content-prize-introduction-border">
+                <div class="heading">
+                    <h3>The Nobel Prize in Physiology or Medicine 2022</h3>
+                </div>
+                <div class="list-laureates-border-top">
+                    <div class="list-laureate">
+                        <div class="img">
+                            <img src="img/Svante Pääbo.png" alt="">
+                        </div>
+                        <div class="figcaption">
+                            <p>© Nobel Prize Outreach. Photo: Stefan Bladh</p>
+                            <h3 class="name"> <a href="">Svante Pääbo</a></h3>
+                            <p>Prize share: 1/3</p>
+                        </div>
+
+                    </div>
+                    <div class="list-laureate">
+                        <div class="img">
+                            <img src="img/Tu Youyou-1.png" alt="">
+                        </div>
+                        <div class="figcaption">
+                            <p>© Nobel Media AB. Photo: A. Mahmoud</p>
+                            <h3 class="name"><a href="">Tu Youyou</a></h3>
+                            <p>Prize share: 1/3</p>
+                        </div>
+
+                    </div>
+                    <div class="list-laureate">
+                        <div class="img">
+                            <img src="img/Barbara McClintock-1.png" alt="">
+                        </div>
+                        <div class="figcaption">
+                            <p>© Nobel Media AB. Photo: A. Mahmoud</p>
+                            <h3 class="name"> <a href="">Barbara McClintock</a></h3>
+                            <p>Prize share: 1/3</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="border-top-pages">
+                <div class="header-page">
+                    <p>
+                        Born: 20 April 1955, Stockholm, Sweden
+                    </p>
+                    <p>
+                        Affiliation at the time of the award: Max Planck Institute for Evolutionary Anthropology,
+                        Leipzig, Germany; Okinawa Institute of Science and Technology, Okinawa, Japan
+                        Prize motivation: “for his discoveries concerning the genomes of extinct hominins and human
+                        evolution
+
+                    </p>
+                </div>
+                <div class="main-page">
+                    <p>
+                        Born: 30 December 1930, Zhejiang Ningbo, China
+                    </p>
+                    <p>Affiliation at the time of the award: China Academy of Traditional Chinese Medicine, Beijing,
+                        China,Prize motivation: “for her discoveries concerning a novel therapy against Malaria”</p>
+                </div>
+                <div class="main-pages">
+                    <p>TBorn: 16 June 1902, Hartford, CT, USA</p>
+                    <p> Died: 2 September 1992, Huntington, NY, USA
+                        Affiliation at the time of the award: Cold Spring Harbor Laboratory, Cold Spring Harbor, NY, USA
+                        Prize motivation: “for her discovery of mobile genetic elements”
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <div id="footer">
+            <div class="social-list">
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
