@@ -5,173 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evens Pages</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
     <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Events</title>
 </head>
-<!--   width: 78vw;
-        height: auto;
-        margin-left: 11vw;
-        margin-right: 11vw;
-    font:'Hanken Grotesk', sans-serif -->
+
 <style>
-    * {
-        margin: 0rem 0rem;
-        padding: 0px 0px;
+    .title-head-top-b {
+        font-size: 1.6rem;
     }
 
-    body {
-
-        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
+    .figcapton {
+        font-size: 1.6rem;
     }
 
-    .logo {
-        text-align: center;
-        padding: 15px 0;
-    }
-
-    .logo img {
-        width: 12%;
-        height: auto;
-    }
-
-    #main-menu {
-        width: 100%;
-        height: auto;
-    }
-
-    #nav-main {
-        display: flex;
-        justify-content: space-evenly;
-        line-height: 50px;
-        background-color: #fff;
-    }
-
-    #nav-main li {
-        position: relative;
-        list-style: none;
-        padding: 0px 20px;
-    }
-
-    #nav-main>li>a {
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 550;
-        color: #ac9e56;
-        display: block;
-    }
-
-    #main-menu>#nav-main>li>a {
-        position: relative;
-    }
-
-    #main-menu>#nav-main>li>a::before {
-        content: "";
-        height: 0.2vh;
-        width: 100%;
-        background-color: #ac8314;
-        position: absolute;
-        bottom: 0px;
-        display: none;
-
-    }
-
-    #main-menu>#nav-main>li:hover>a::before {
-        display: block;
-
-    }
-
-    #nav-main ul.sub-menu {
-        position: absolute;
-        padding: 15px 0;
-        width: 170px;
-        display: none;
-        background-color: #fff;
-    }
-
-    #nav-main li:hover>ul.sub-menu {
-        display: block;
-    }
-
-    #nav-main ul.sub-menu li a {
-        text-decoration: none;
-        font-size: 16px;
-        padding-left: 12px;
-    }
-
-    #nav-main ul.sub-menu li {
-        padding: 10px 0px;
-    }
-
-    #nav-main ul.sub-menu li a {
-        color: #ac8314;
-    }
-
-    #nav-main ul.sub-menu li:hover a {
-        color: #e2ad23;
-        background-color: white;
-    }
-
-    .nav {
-        /* background: rgb(212, 208, 208); */
-        margin: 3rem;
-        /* height: 6vh; */
-    }
-
-    .nav ul {
-
-        text-align: center;
-
-    }
-
-    .nav ul li {
-        list-style: none;
-        display: inline-flex;
-
-    }
-
-    .nav ul li a {
-        text-decoration: none;
-        padding: 10px;
-        color: #ac9e56;
-        font-size: 20px;
-    }
-
-    .nav1 ul {
-        list-style: none;
-        padding-bottom: 1cm;
-
-    }
-
-    .nav1 ul li a {
-        color: #3498db;
-        font-size: 2rem;
-        text-decoration: none;
-    }
-
-    .nav1 ul li:hover a {
-        color: #2c3e50;
-    }
-
-    .banner {
-        width: 100%;
-        text-align: center;
-        /* height: 70vh; */
-    }
-
-    .banner img {
-        width: 100%;
-        height: 70vh;
+    .figcapton-a {
+        font-size: 1.6rem;
     }
 
     p.title-banner {
         font-size: 1.1rem;
-        font-family: 'Hanken Grotesk', sans-serif;
         color: #737679;
-
     }
 
     .article-content {
@@ -180,18 +40,19 @@
         background-color: #f6f6f6;
     }
 
+    .hero-link-h4 {
+        font-size: 4rem;
+    }
+
     .blur {
         text-align: center;
-        padding: 8vh 0vh;
+        padding: 4vw 0;
     }
 
     .blur a {
         text-decoration: none;
         font-size: 4rem;
         text-transform: capitalize;
-        font-family: 'Hanken Grotesk', sans-serif;
-        font-weight: normal;
-
     }
 
     .article-content-header {
@@ -199,62 +60,52 @@
         height: auto;
         margin-left: 11vw;
         margin-right: 11vw;
-        /* background-color: aquamarine; */
-
     }
 
     .article-content-header-top {
         display: flex;
         justify-content: space-between;
-        /* text-align: justify; */
-
     }
 
     .article-content-header-top-h4 {
         width: 70%;
         height: auto;
         border-top: #c6c9cc solid thin;
-        /* background-color: #3498db; */
         padding: 5vh 0vh;
     }
 
     .quick-fact {
         width: 25%;
-        height: 70vh;
+        height: auto;
         border-top: #c6c9cc solid thin;
-        /* background-color: red; */
         padding: 5vh 0vh;
     }
 
     h4.title {
-        font-size: 1.5rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 2rem;
         padding: 3vh 0vh;
         color: #ac9e56;
         text-transform: capitalize;
-
     }
 
     .text p {
         padding: 3vh 0vh;
-        font-size: 1.1rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.6rem;
+        
     }
 
     .quick-fact h4 {
-        font-size: 1.5rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 2rem;
         padding: 3vh 0vh;
         color: #ac9e56;
         text-transform: capitalize;
-        text-align: center;
     }
 
     .quick-fact p {
         /* text-align: justify; */
         padding: 3vh 0vh;
-        font-size: 1.2rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.6rem;
+        
 
     }
 
@@ -275,12 +126,10 @@
     }
 
     header.header-top {
-        font-size: 1.5rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 2.4rem;
         font-weight: normal;
         padding: 3vh 0vh;
         color: #ac8314;
-
     }
 
     .section-article-feature-content {
@@ -318,36 +167,25 @@
     }
 
     .section-article-featrue-content-main a {
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: #3498db;
     }
 
-    .section-article-featrue-content-main p,
-    a {
-
+    .section-article-featrue-content-main p {
         text-decoration: none;
-        font-size: 1.2rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.6rem;
         font-weight: normal;
-        padding: 5vh 0vh;
-        /* color: #e2ad23; */
     }
 
     .section-article-feature-content-main-right a {
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: #3498db;
-
     }
 
-    .section-article-feature-content-main-right p,
-    a {
-
+    .section-article-feature-content-main-right p {
         text-decoration: none;
-        font-size: 1.2rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.6rem;
         font-weight: normal;
-        padding: 5vh 0vh;
-
     }
 
     .section-article-feature-a {
@@ -359,12 +197,10 @@
     }
 
     .header-top-a h3 {
-        font-size: 1.5rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 2.4rem;
         font-weight: normal;
         padding: 3vh 0vh;
         color: #ac8314;
-
     }
 
     .section-article-feature-header-a {
@@ -387,7 +223,7 @@
 
     a.title-head-top {
         font-size: 2rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        
         font-weight: normal;
         padding: 8vh 0vh;
         color: #3498db;
@@ -398,6 +234,7 @@
 
         width: 48%;
         height: auto;
+        padding-bottom: 2vw;
         /* background-color: blueviolet; */
         border-top: #c6c9cc solid thin;
     }
@@ -406,6 +243,7 @@
     .section-article-feature-content-main-right-a {
         width: 48%;
         height: auto;
+        padding-bottom: 2vw;
         /* background-color: crimson; */
     }
 
@@ -416,99 +254,55 @@
 
     .section-article-featrue-content-main-a:hover a.title-head-top:hover {
         color: #ac8314;
-
     }
 
     .section-article-feature-content-a p {
-        font-size: 1.5rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.6rem;
         font-weight: normal;
         padding: 5vh 0vh;
-
-    }
-
-
-
-    #footer {
-        padding: 6.4vh 1.6vw;
-        text-align: center;
-        background-color: #ac8314;
-    }
-
-    #footer .social-list {
-        font-size: 2.4vw;
-    }
-
-    #footer .social-list a {
-        color: rgba(0, 0, 0, 0.6);
-        text-decoration: none;
-    }
-
-    #footer .social-list a:hover,
-    #footer .copyright a {
-        color: rgba(0, 0, 0, 0.4);
-    }
-
-    #footer .copyright {
-        margin-top: 1.5vh;
-        color: rgba(0, 0, 0, 0.6);
-        font-size: 1.6vw;
-    }
-
-    #footer .copyright a {
-        color: rgba(0, 0, 0, 0.6);
-        text-decoration: none;
     }
 </style>
 
 <body>
     <div class="wrapper">
         <div id="header">
-            <header class="logo">
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="ti-arrow-circle-up"></i></button>
+            <header class="header__logo">
                 <a href="index.html">
                     <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
                 </a>
             </header>
-            <div id="main-menu">
-                <ul id="nav-main">
+            <div id="header__main-menu">
+                <ul id="header__main-menu-title">
                     <li><a href="">Winners</a>
                         <ul class="sub-menu">
-                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Physics.html">Physics Prize</a></li>
                             <li><a href="Chemistry.html">Chemistry Prize</a></li>
-                            <li><a href="medicine.html">Medicine Prize</a></li>
-                            <li><a href="literature.html">Literature Prize</a></li>
-                            <li><a href="peace.html">Peace Prize</a></li>
+                            <li><a href="Medicine.html">Medicine Prize</a></li>
+                            <li><a href="Literature.html">Literature Prize</a></li>
+                            <li><a href="Peace.html">Peace Prize</a></li>
                         </ul>
                     </li>
-                    <li><a href="team-member.html">About Us</a>
-                        <!-- <ul class="sub-menu">
-                            <li><a href="">Alfred Nobel’s life</a></li>
-                            <li><a href="">Alfred Nobel’s will</a></li>
-                        </ul> -->
-                    </li>
-                    <li><a href="nominations.html">Nomination</a>
+                    <li><a href="Team-Member.html">About Us</a></li>
+                    <li><a href="">Nomination</a>
                         <ul class="sub-menu">
-                            <li><a href="nomination_physics.html">Physics Prize</a></li>
-                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
-                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
-                            <li><a href="nomination_literature.html">Literature Prize</a></li>
-                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                            <li><a href="Physics-Nomination.html">Physics Prize</a></li>
+                            <li><a href="Chemistry-Nomination.html">Chemistry Prize</a></li>
+                            <li><a href="Medicine-Nomination.html">Medicine Prize</a></li>
+                            <li><a href="Literature-Nomination.html">Literature Prize</a></li>
+                            <li><a href="Peace-Nomination.html">Peace Prize</a></li>
                         </ul>
                     </li>
                     <li><a href="News.html">News</a></li>
-                    <li><a href="events.html">Events</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="banner">
-            <img src="img/Olga Botner interviewed.jpg" alt="">
-            <p class="title-banner">Olga Botner interviewed at a press conference at the Royal Swedish Academy of
-                Sciences. © Nobel Prize Outreach. Photo: A. Mahmoud</p>
         </div>
     </div>
     <div class="blur">
         <a href="" class="hero-link">
-            <h4>press Room</h4>
+            <h4 class="hero-link-h4">Press Room</h4>
         </a>
     </div>
     <div class="article-content">
@@ -583,8 +377,6 @@
                     <div class="figcapton">
                         <span>© Nobel Media AB. Photo: A. Mahmoud</span>
                     </div>
-
-
                 </div>
             </div>
             <div class="section-article-feature-content">
@@ -659,14 +451,11 @@
                 <div class="section-article-featrue-content-main-a">
                     <a href="" class="title-head-top">2023 Nobel Prize announcements</a>
                     <p class="title-content-a">This year’s Nobel Prize announcements will take place 2–9 October.</p>
-                    <div class="figcapton-a">
-                        <a href="">See the full schedule</a>
-                    </div>
 
                 </div>
                 <div class="section-article-feature-content-main-right-a">
                     <div class="baner-content-a">
-                        <img src="img/announcement-dates-2023.jpg" alt="">
+                        <img src="./img/the nobel-prizes 1.png" alt="">
                     </div>
                     <div class="figcapton">
                         <span>© Nobel Media AB. Photo: A. Mahmoud</span>
@@ -713,7 +502,6 @@
         <div class="section-article-feature-header-a">
             <header class="header-top-a">
                 <h3>Coming up</h3>
-
             </header>
             <div class="section-article-feature-content-a">
                 <div class="section-article-featrue-content-main-a">
@@ -727,22 +515,17 @@
                         <a href="">Speakers will include Nobel Prize laureates such as journalist and author Maria Ressa
                             and astrophysicist Saul Perlmutter</a>
                     </div>
-
                 </div>
                 <div class="section-article-feature-content-main-right-a">
                     <div class="baner-content-a">
-                        <img src="img/announcement-dates-2023.jpg" alt="">
+                        <img src="./img/award-ceremony-stockholm-2021.jpg" alt="">
                     </div>
                     <div class="figcapton">
                         <span>Maria Ressa. © Nobel Prize Outreach. Photo: Geir Anders Rybakken Ørslien</span>
                     </div>
-
-
                 </div>
             </div>
-
         </div>
-
     </div>
     <div class="section-article-feature-a">
         <div class="section-article-feature-header-a">
@@ -756,6 +539,7 @@
                     </div>
                     <div class="figcapton">
                         <span>
+                            Illustration of the view from inside the Nobel Center
                             Illustration of the view from inside the Nobel Center. Illustration: TMRW.inc</span>
                     </div>
                 </div>
@@ -764,11 +548,11 @@
                         dialogue</a>
                     <p class="title-content-a">This year’s Nobel Prize announcements will take place 2–9 October.</p>
                     <div class="figcapton-a">
-                        <a href="">The new Nobel Center at Slussen in Stockholm will offer a broad range of public
+                        The new Nobel Center at Slussen in Stockholm will offer a broad range of public
                             activities including exhibitions, school programmes, lectures and conversations about the
                             major issues of the future. The public activities that are already being conducted around
                             the world, digitally and at the Nobel Prize Museum in Stockholm’s Old Town, will be further
-                            developed and scaled up for the opening of the Nobel Center.</a>
+                            developed and scaled up for the opening of the Nobel Center.
                     </div>
 
                 </div>
@@ -787,10 +571,9 @@
                 <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
                 <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
             </div>
-            <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
+            <p class="copyright">Copyright &copy; by <a href="Team-Member.html">Team 1</a></p>
         </div>
     </footer>
-
 </body>
 
 </html>

@@ -5,14 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
     <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
     <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -44,101 +37,77 @@
     .faq_title {
         text-align: center;
         font-size: 50px;
-        padding-bottom: 2%;
+        padding-bottom: 2vw;
+        font-size: 2.4rem;
     }
 
     .faq_text {
         text-align: justify;
-        line-height: 1.4;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
     }
 
     .faq_ask {
         padding-bottom: 2%;
     }
 
+    .faq_topic {
+        font-size: 2rem;
+        padding: 2vw 0;
+    }
+
     .faq_heading,
     .faq_sub_heading {
-        padding-bottom: 2%;
+        padding-bottom: 2vw;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
     }
 
     .faq_answer_text {
         margin-bottom: 3vh;
         display: inline-block;
-        text-align: justify;
-        line-height: 1.4;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
     }
 
-    #myBtn {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Fixed/sticky position */
-        bottom: 20px;
-        /* Place the button at the bottom of the page */
-        right: 30px;
-        /* Place the button 30px from the right */
-        z-index: 99;
-        /* Make sure it does not overlap */
-        border: none;
-        /* Remove borders */
-        outline: none;
-        /* Remove outline */
-        background-color: #b9942b;
-        /* Set a background color */
-        color: white;
-        /* Text color */
-        cursor: pointer;
-        /* Add a mouse pointer on hover */
-        padding: 15px;
-        /* Some padding */
-        border-radius: 10px;
-        /* Rounded corners */
-        font-size: 18px;
-        /* Increase font size */
-    }
-
-    #myBtn:hover {
-        background-color: #555;
-        /* Add a dark-grey background on hover */
+    li {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
     }
 </style>
 
 <body>
     <div id="header">
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="ti-arrow-circle-up"></i></button>
-        <header class="logo">
+        <header class="header__logo">
             <a href="index.html">
                 <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
             </a>
         </header>
-        <div id="main-menu">
-            <ul id="nav-main">
+        <div id="header__main-menu">
+            <ul id="header__main-menu-title">
                 <li><a href="">Winners</a>
                     <ul class="sub-menu">
-                        <li><a href="physics.html">Physics Prize</a></li>
+                        <li><a href="Physics.html">Physics Prize</a></li>
                         <li><a href="Chemistry.html">Chemistry Prize</a></li>
-                        <li><a href="medicine.html">Medicine Prize</a></li>
-                        <li><a href="literature.html">Literature Prize</a></li>
-                        <li><a href="peace.html">Peace Prize</a></li>
+                        <li><a href="Medicine.html">Medicine Prize</a></li>
+                        <li><a href="Literature.html">Literature Prize</a></li>
+                        <li><a href="Peace.html">Peace Prize</a></li>
                     </ul>
                 </li>
-                <li><a href="team-member.html">About Us</a>
-                    <!-- <ul class="sub-menu">
-                        <li><a href="">Alfred Nobel’s life</a></li>
-                        <li><a href="">Alfred Nobel’s will</a></li>
-                    </ul> -->
-                </li>
-                <li><a href="nominations.html">Nomination</a>
+                <li><a href="Team-Member.html">About Us</a></li>
+                <li><a href="">Nomination</a>
                     <ul class="sub-menu">
-                        <li><a href="nomination_physics.html">Physics Prize</a></li>
-                        <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
-                        <li><a href="nomination_medicine.html">Medicine Prize</a></li>
-                        <li><a href="nomination_literature.html">Literature Prize</a></li>
-                        <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                        <li><a href="Physics-Nomination.html">Physics Prize</a></li>
+                        <li><a href="Chemistry-Nomination.html">Chemistry Prize</a></li>
+                        <li><a href="Medicine-Nomination.html">Medicine Prize</a></li>
+                        <li><a href="Literature-Nomination.html">Literature Prize</a></li>
+                        <li><a href="Peace-Nomination.html">Peace Prize</a></li>
                     </ul>
                 </li>
                 <li><a href="News.html">News</a></li>
-                <li><a href="events.html">Events</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
             </ul>
         </div>
     </div>

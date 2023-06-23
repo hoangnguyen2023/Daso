@@ -5,130 +5,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" type="text/css" href="test.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
     <link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" type="image/x-icon" />
     <link rel="stylesheet" href="./font/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>About Us</title>
 
 </head>
 <style>
-    * {
-        padding: 0px;
-        margin: 0px;
-        /* box-sizing: border-box; */
-    }
-
-    body {
-        font-family: Alfred Sans Regular, Helvetica Neue, Arial, sans-serif;
-    }
-
-    .logo {
-        text-align: center;
-        padding: 15px 0;
-    }
-
-    .logo img {
-        width: 12%;
-        height: auto;
-    }
-
-    #main-menu {
-        width: 100%;
-        height: auto;
-    }
-
-    #nav-main {
-
-        display: flex;
-        justify-content: space-evenly;
-        line-height: 50px;
-        background-color: #fff;
-    }
-
-    .nav ul li a {
-        text-decoration: none;
-        padding: 10px;
-        color: #ac9e56;
-        font-size: 20px;
-    }
-
-    #nav-main li {
-        position: relative;
-        list-style: none;
-        padding: 0 30px;
-    }
-
-    #nav-main>li>a {
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 550;
-        color: #ac9e56;
-        display: block;
-
-    }
-
-    #main-menu>#nav-main>li>a {
-        position: relative;
-    }
-
-    #main-menu>#nav-main>li>a::before {
-        content: "";
-        height: 0.2vh;
-        width: 100%;
-        background-color: #ac8314;
-        position: absolute;
-        bottom: 0px;
-        display: none;
-
-    }
-
-    #main-menu>#nav-main>li:hover>a::before {
-        display: block;
-
-    }
-
-
-    /* #nav-main>li>a:hover {
-        background-color: aqua;
-        border-bottom: 0.4vh solid #ac8314;
-    } */
-
-    #nav-main ul.sub-menu {
-        z-index: 2;
-        position: absolute;
-        padding: 15px 0;
-        width: 170px;
-        display: none;
-        background-color: #fff;
-    }
-
-    #nav-main li:hover>ul.sub-menu {
-        display: block;
-    }
-
-    #nav-main ul.sub-menu li a {
-        text-decoration: none;
-        font-size: 16px;
-        padding-left: 12px;
-    }
-
-    #nav-main ul.sub-menu li {
-        padding: 10px 0px;
-    }
-
-    #nav-main ul.sub-menu li a {
-        color: #ac8314;
-    }
-
-    #nav-main ul.sub-menu li:hover a {
-        color: #e2ad23;
-        background-color: white;
-    }
-
     @keyframes colorful {
         0% {
             filter: hue-rotate(0deg);
@@ -150,49 +37,12 @@
         outline: none;
         appearance: none;
         border-style: none;
-        color: #ffffff;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
 
-    h1,
-    h2,
-    h3,
-    span,
-    p {
-        font-family: "Montserrat", -apple-system, BlinkMacSystemFont,
-            "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira 
- Sans", " Droid Sans", " Helvetica Neue", sans-serif;
-
-    }
-
-    html,
-    body {
-
-
-        background: #161623;
-        /*scrollbar-width: none;
-    overflow: hidden;
-  
-    &::-webkit-scrollbar {
-      width: 0;
-    }*/
-    }
-
-    body {
-        position: relative;
-
-        /* display: flex; */
-        /* justify-content: center;
-        align-items: center;
-        flex-direction: column; */
-        /* padding: 2em; */
-    }
-
-
-
     body::-webkit-scrollbar {
-        background: #020202;
+        background: #000000;
         width: 10px;
     }
 
@@ -201,21 +51,15 @@
     }
 
     body::-webkit-scrollbar-thumb {
-        background: #ffffff;
+        background: #fffbfb;
         border-radius: 1px;
     }
 
-    .wrapper {
-        width: 100%;
-        background-color: white;
-        padding-bottom: 5vh;
-    }
-
     .user-map {
+        background-color: #212121;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.05);
-        /* padding-top: 5vh; */
-
+        height: auto;
+        padding-bottom: 4vw;
     }
 
     .user-map-content {
@@ -225,24 +69,59 @@
         margin-right: 11vw;
     }
 
+    #h2-contact {
+        text-align: center;
+        padding-top: 3vw;
+        font-size: 2.4rem;
+        /* sua color*/
+        color: #fff;
+    }
+
     .user-map-content-wrapper {
         display: flex;
         justify-content: space-between;
         padding: 10vh 0vh;
         width: 100%;
         height: auto;
+        transform: translateY(-2vw);
+    }
+
+    .information-contact {
+        width: 100%;
+        position: relative;
+        transform: translate(-40vw, -3vw);
+        height: 20vh;
+        padding-top: 4vw;
+    }
+
+    #idname,
+    #idphone,
+    #idemail,
+    #idtitle {
+        padding: 0.5vw 1vw;
+    }
+
+    #idcomment {
+        width: 36.5vw;
+        margin-bottom: 2vw;
+        margin-left: 0.2vw;
+        padding: 0.5vw 1vw;
     }
 
     .main-map {
         width: 48%;
-        height: auto;
-        /* background-color: aqua; */
+        height: 23vw;
+        transform: translateY(0.7vw);
+
+    }
+
+    .main-map iframe {
+        width: 100%;
+        height: 100%;
     }
 
     .user-input-contact {
         width: 48%;
-        /* background-color: #020202; */
-
     }
 
     .form-contract {
@@ -253,7 +132,6 @@
 
     .user-contact-main form {
         text-align: justify;
-
     }
 
     form .form-contact-button {
@@ -263,34 +141,34 @@
     label {
         color: #ffffff;
         font-size: 1.5rem;
-        font-family: 'Hanken Grotesk', sans-serif;
     }
 
     h5 {
         color: #ffffff;
-        font-size: 1.2rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1.6rem;
         font-weight: normal;
         padding: 1vh 1vh;
-
     }
 
     textarea {
-        color: #020202;
-        font-size: 0.9rem;
-        font-family: 'Hanken Grotesk', sans-serif;
+        color: #020202;        
         font-weight: normal;
     }
 
     body .container {
         position: relative;
-        /* z-index: 1; */
+        background-color: #020202;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 1em;
+    }
+
+    /* do mau icon member*/
+    .sci li .fa {
+        color: white;
     }
 
     body .container .card {
@@ -388,80 +266,50 @@
         transform: translateY(0px);
         opacity: 1;
     }
-
-    #footer {
-        padding: 6.4vh 1.6vw;
-        text-align: center;
-        background-color: #ac8314;
-    }
-
-    #footer .social-list {
-        font-size: 2.4vw;
-    }
-
-    #footer .social-list a {
-        color: rgba(0, 0, 0, 0.6);
-        text-decoration: none;
-    }
-
-    #footer .social-list a:hover,
-    #footer .copyright a {
-        color: rgba(0, 0, 0, 0.4);
-    }
-
-    #footer .copyright {
-        margin-top: 1.5vh;
-        color: rgba(0, 0, 0, 0.6);
-        font-size: 1.6vw;
-    }
-
-    #footer .copyright a {
-        color: rgba(0, 0, 0, 0.6);
-        text-decoration: none;
-    }
 </style>
 
 <body>
     <div class="wrapper">
+
         <div id="header">
-            <header class="logo">
+
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="ti-arrow-circle-up"></i></button>
+            <header class="header__logo">
                 <a href="index.html">
                     <img src="img/Logo.jpg" alt="nobel-prizes" usemap="#nobel">
                 </a>
             </header>
-            <div id="main-menu">
-                <ul id="nav-main">
+            <div id="header__main-menu">
+                <ul id="header__main-menu-title">
                     <li><a href="">Winners</a>
                         <ul class="sub-menu">
-                            <li><a href="physics.html">Physics Prize</a></li>
+                            <li><a href="Physics.html">Physics Prize</a></li>
                             <li><a href="Chemistry.html">Chemistry Prize</a></li>
-                            <li><a href="medicine.html">Medicine Prize</a></li>
-                            <li><a href="literature.html">Literature Prize</a></li>
-                            <li><a href="peace.html">Peace Prize</a></li>
+                            <li><a href="Medicine.html">Medicine Prize</a></li>
+                            <li><a href="Literature.html">Literature Prize</a></li>
+                            <li><a href="Peace.html">Peace Prize</a></li>
                         </ul>
                     </li>
-                    <li><a href="team-member.html">About Us</a>
-                        <!-- <ul class="sub-menu">
-                            <li><a href="">Alfred Nobel’s life</a></li>
-                            <li><a href="">Alfred Nobel’s will</a></li>
-                        </ul> -->
-                    </li>
-                    <li><a href="nominations.html">Nomination</a>
+                    <li><a href="Team-Member.html">About Us</a></li>
+                    <li><a href="">Nomination</a>
                         <ul class="sub-menu">
-                            <li><a href="nomination_physics.html">Physics Prize</a></li>
-                            <li><a href="nomination_chemistry.html">Chemistry Prize</a></li>
-                            <li><a href="nomination_medicine.html">Medicine Prize</a></li>
-                            <li><a href="nomination_literature.html">Literature Prize</a></li>
-                            <li><a href="nomonation_piece.html">Peace Prize</a></li>
+                            <li><a href="Physics-Nomination.html">Physics Prize</a></li>
+                            <li><a href="Chemistry-Nomination.html">Chemistry Prize</a></li>
+                            <li><a href="Medicine-Nomination.html">Medicine Prize</a></li>
+                            <li><a href="Literature-Nomination.html">Literature Prize</a></li>
+                            <li><a href="Peace-Nomination.html">Peace Prize</a></li>
                         </ul>
                     </li>
                     <li><a href="News.html">News</a></li>
-                    <li><a href="events.html">Events</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li> 
                 </ul>
             </div>
         </div>
     </div>
+
     <div class="user-map">
+        <h2 id="h2-contact">Contact</h2>
         <div class="user-map-content">
             <div class="user-map-content-wrapper">
                 <div class="main-map">
@@ -471,10 +319,10 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
+
                 <div class="user-input-contact">
                     <div class="user-contact-main">
                         <form action="" onsubmit="return xuat()">
-                            <label for="">Contact:</label>
                             <div class="form-contract">
                                 <div class="input-type-contact">
                                     <input type="text" name="name" id="idname" class="inputname" placeholder="Full Name"
@@ -492,31 +340,26 @@
 
                             </div>
                             <div class="form-contact-button">
-                                <textarea name="commment" id="idcomment" cols="70" rows="10">Comment</textarea><br>
+                                <textarea name="commment" id="idcomment" cols="70" rows="10"
+                                    placeholder="Comment"></textarea><br>
 
-                                <input type="submit" value="submit" name="send" id="idsend" class="send"
+                                <input type="submit" value="Submit" name="send" id="idsend" class="send"
                                     style="width: 18vw; height: 5vh ;color: #141313; background-color: rgb(222, 217, 217);">
 
                             </div>
                             <div class="information-contact">
                                 <h5> <i class="fa-solid fa-location-dot" style="color: rgb(222, 217, 217);"></i> Adress
-                                    : 590 Cách Mạng Tháng 8 , Q3 , TP hcm</h5>
-                                <h5><i class="fa-solid fa-phone" style="color:rgb(222, 217, 217) ;"></i> Phone:
+                                    : 590 CMT8 Street, District 3, HCM City</h5>
+                                <h5><i class="fa-solid fa-phone" style="color:rgb(222, 217, 217) ;"></i> Phone: 028 7300
+                                    8866
                                 </h5>
-                                <h5><i class="fa-solid fa-envelope" style="color:rgb(222, 217, 217) ;"></i> Email:</h5>
-                                <h5>FAQ</h5>
-
+                                <h5><i class="fa-solid fa-envelope" style="color:rgb(222, 217, 217) ;"></i> Email:
+                                    fptaptech@edu.com.vn</h5>
                             </div>
-
                         </form>
-
                     </div>
-
-
-
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -524,7 +367,7 @@
     <div class="container">
         <div class="card">
             <div class="content">
-                <div class="img"><img src="Nobel Prizes/img/avatar.jpg"></div>
+                <div class="img"><img src="./img/Linh_Avatar.jpg"></div>
                 <div class="cardContent">
                     <h3>Dinh Hoang Khanh Linh<br><span>Web Developer</span></h3>
                 </div>
@@ -562,7 +405,7 @@
         </div>
         <div class="card">
             <div class="content">
-                <div class="img"><img src="Nobel Prizes/img/avatar.jpg"></div>
+                <div class="img"><img src="./img/Huy_avatar.jpg"></div>
                 <div class="cardContent">
                     <h3>Tran Bao Huy<br><span>Web Developer</span></h3>
                 </div>
@@ -583,11 +426,11 @@
     <footer>
         <div id="footer">
             <div class="social-list">
-                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook"></i></a>
-                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram"></i></a>
-                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube"></i></a>
-                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter-alt"></i></a>
-                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin"></i></a>
+                <a href="https://www.facebook.com/nobelprize/"><i class="ti-facebook icon_black"></i></a>
+                <a href="https://www.instagram.com/nobelprize_org/?hl=en"><i class="ti-instagram icon_black"></i></a>
+                <a href="https://www.youtube.com/thenobelprize"><i class="ti-youtube icon_black"></i></a>
+                <a href="https://twitter.com/NobelPrize"><i class="ti-twitter icon_black"></i></a>
+                <a href="https://www.linkedin.com/company/nobelprize/"><i class="ti-linkedin icon_black"></i></a>
             </div>
             <p class="copyright">Copyright &copy; by <a href="">Team 1</a></p>
         </div>
@@ -654,6 +497,26 @@
             return true;
         }
         return false;
+    }
+
+    // Get the button:
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 
 </script>
